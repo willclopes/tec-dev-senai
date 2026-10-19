@@ -1,0 +1,14 @@
+ 
+ 
+ 
+ 
+
+npm i styled-components
+
+npm i phosphor-react
+
+npm i react-router-dom   
+
+--------------------------------------------------
+
+npm install styled-components react-router-dom  
