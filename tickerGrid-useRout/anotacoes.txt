@@ -1,0 +1,12 @@
+https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL,ARS-BRL,JPY-BRL,ETH-BRL
+
+
+Para acrescentar mais moedas nesse link da AwesomeAPI, basta digitar uma vírgula (,) sem espaços no final do endereço e adicionar o código do novo par de moedas no formato
+
+Ver todas as combinações possíveis (ex: USD-BRL):
+[https://economia.awesomeapi.com.br/xml/available]
+(https://economia.awesomeapi.com.br/xml/available)
+
+Ver a sigla de cada moeda individualmente:
+[https://economia.awesomeapi.com.br/xml/available/uniq]
+(https://economia.awesomeapi.com.br/xml/available/uniq)
