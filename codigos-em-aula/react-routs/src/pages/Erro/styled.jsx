@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f4f4f9;
+  background-color: var(--bg-error);
   font-family: sans-serif;
   text-align: center;
   padding: 20px;

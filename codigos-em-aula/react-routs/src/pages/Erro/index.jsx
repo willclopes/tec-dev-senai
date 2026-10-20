@@ -21,7 +21,7 @@ export function Erro() {
       <Message>A página que você tentou acessar não existe ou foi removida.</Message>
       
       <HomeLink onClick={handleClick}>
-        Voltar para a Home
+        ◀️Voltar para a Home
       </HomeLink>
     </Container>
   );
