@@ -5,10 +5,31 @@
 
 npm i styled-components
 
-npm i phosphor-react
+npm i @phosphor-icons/react
 
 npm i react-router-dom   
+
+npm i axios
 
 --------------------------------------------------
 
 npm install styled-components react-router-dom  
+
+
+----------------------------
+
+vscode
+instalar o css auto complete
+
+---------------------------------
+
+
+https://reqres.in/
+
+hlvqsj7l@tempkit.io
+hlvqsj7l
+
+
+key_api: free_user_3KyeStPVznBp8USmDJJ3XUxwPlL
+
+-------------------------------------

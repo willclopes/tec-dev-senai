@@ -1,106 +1,17 @@
-/* 
-  🎨 Modern Design System Variables 
-  Uma paleta de cores moderna, elegante e pronta para uso.
-*/
-
 :root {
-  /* =========================================
-     NEUTROS E FUNDOS (Modo Claro)
-     ========================================= */
-  --bg-base: #f8fafc;
-  --bg-surface: #ffffff;
-  --bg-surface-elevated: #f1f5f9;
-  --bg-error-light: #f4f4f9;
-  
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
-  
-  --border-subtle: #f1f5f9;
-  --border-light: #e2e8f0;
-  --border-dark: #cbd5e1;
+    --bg-color: #ccfbf1;
+    --primary-color: #f11b1b
+    --secondary-color: #0d0a0a
+    --text-color: #797979
 
-  /* =========================================
-     CORES DE FEEDBACK E ESTADOS
-     ========================================= */
-  /* Erro */
-  --bg-error: #fef2f2;
-  --text-error: #ef4444;
-  --border-error: #fca5a5;
-
-  /* Sucesso */
-  --bg-success: #f0fdf4;
-  --text-success: #22c55e;
-  --border-success: #86efac;
-
-  /* Aviso (Warning) */
-  --bg-warning: #fffbeb;
-  --text-warning: #f59e0b;
-  --border-warning: #fcd34d;
-
-  /* Informação */
-  --bg-info: #eff6ff;
-  --text-info: #3b82f6;
-  --border-info: #93c5fd;
-
-  /* =========================================
-     CORES DA MARCA (Primárias, Secundárias e Destaques)
-     ========================================= */
-  /* Indigo moderno (Primária) */
-  --primary-50: #eef2ff;
-  --primary-100: #e0e7ff;
-  --primary-500: #6366f1;
-  --primary-600: #4f46e5;
-  --primary-900: #312e81;
-
-  /* Rosa/Fuchsia elegante (Secundária) */
-  --secondary-50: #fdf4ff;
-  --secondary-500: #d946ef;
-  --secondary-600: #c026d3;
-
-  /* Ciano / Teal (Accent) */
-  --accent-50: #ecfeff;
-  --accent-500: #06b6d4;
-  --accent-600: #0891b2;
-
-  /* =========================================
-     GRADIENTES MODERNOS
-     ========================================= */
-  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #d946ef 100%);
-  --gradient-ocean: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-  --gradient-sunset: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
-  --gradient-emerald: linear-gradient(135deg, #34d399 0%, #059669 100%);
-  --gradient-midnight: linear-gradient(135deg, #0f172a 0%, #312e81 100%);
-  
-  /* Gradiente especial para efeitos de Glassmorphism */
-  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
-  
-  /* Sombra elegante com as cores */
-  --shadow-primary: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
-}
-
-/* =========================================
-   MODO ESCURO (Opcional - Ativação Automática)
-   ========================================= */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-base: #0f172a;
-    --bg-surface: #1e293b;
-    --bg-surface-elevated: #334155;
+    --teal-50: #f0fdfa;
+    --teal-100: #ccfbf1;
+    --teal-200: #99f6e4;
+    --teal-300: #5eead4;
+    --teal-400: #2dd4bf;
+    --teal-500: #14b8a6;
+    --teal-600: #14b8a6;
+    --teal-700: #0f766e;
     
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --text-muted: #64748b;
-    
-    --border-subtle: #1e293b;
-    --border-light: #334155;
-    --border-dark: #475569;
-
-    --bg-error: #450a0a;
-    --bg-success: #052e16;
-    --bg-warning: #451a03;
-    --bg-info: #172554;
-    
-    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
-  }
+    --font-size: 24px;
 }
