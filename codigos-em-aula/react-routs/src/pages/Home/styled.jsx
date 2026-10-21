@@ -1,112 +1,64 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
+export const HomeContainer = styled.div`
     height: 100vh;
     width: 100vw;
 
     background-color: var(--bg-color);
 
     display: flex;
-    align-items: center;
-    justify-content: center;
-`
-
-export const LoginSuccess = styled.div`
-    height: 50px;
-    width: 85%;
-
-    border-radius: 8px;
-
-    background-color: #72e969;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    h1{
-        color: #007c04;
-    }
-`
-
-export const LoginFail = styled.div`
-    height: 50px;
-    width: 85%;
-
-    border-radius: 8px;
-
-    background-color: #e96969;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    h1{
-        color: #7c0000;
-        font-size: 16px;
-    }
-`
-
-export const LoginContainer = styled.div`
-    height: 350px;
-    width: 300px;
-
-    border-radius: 16px;
-    box-shadow: 4px 4px 10px #7b8189;
-
-    background-color: #FFFFFF;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
 `
 
-export const FormContainer = styled.form`
+export const ButtonsContainer = styled.div`
+    margin-top: 24px;
+
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
 
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-
-        input {
-            height: 20px;
-            
-            padding: 16px 8px;
-            
-            border: none;
-            border-radius: 4px;
-            outline: none;
-            background-color: #C1CAD6;
-        }
-
-        label {
-            font-size: 20px; 
-        }
-    } 
-    
 
     button {
-        height: 40px;
-        width: 100%;
+        height: 32px;
+        width: 200px;
 
+        background-color: var(--teal-300);
         border: none;
         border-radius: 8px;
-        
-        background-color: var(--teal-300);
-        
-        color: white;
-        font-size: 20px;
-
+        color: var(--teal-700);
         cursor: pointer;
-        transition: .1s ease-out;
-        
-        &:hover {
-            background-color:  var(--teal-400);
-        }
+    }
+`
+
+
+export const UsersListContainer = styled.div`
+    padding: 32px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+
+`
+
+export const UserCard = styled.div`
+
+    padding: 16px;
+    border-radius: 8px;
+
+    background-color: var(--teal-200);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    img {
+        height: 72px;
+        border-radius: 99%;
+        border: 3px solid var(--teal-700);
     }
 `
