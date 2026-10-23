@@ -16,6 +16,8 @@ npm i axios
 npm install styled-components react-router-dom  
 
 
+npm install react-hook-form
+
 ----------------------------
 
 vscode
@@ -33,5 +35,6 @@ hlvqsj7l
 
 
 key_api: free_user_3KyeStPVznBp8USmDJJ3XUxwPlL
+
 
 -------------------------------------
