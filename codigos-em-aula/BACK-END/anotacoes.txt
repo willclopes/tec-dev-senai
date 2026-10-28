@@ -1,2 +1,5 @@
 insomnia
 login pelo github
+
+
+node --watch server.js
