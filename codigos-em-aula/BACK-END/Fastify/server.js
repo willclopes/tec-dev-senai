@@ -26,9 +26,14 @@ app.get('/tasks-done', async (request, response) => {
     
     let tasksDone = tasks.filter(task => String(task.done) === request.query.done)
 
-    console.log(tasksDone)
-
     response.code(200).send(tasksDone)
+})
+
+// ROTA DELETE
+app.delete('/tasks/:id', async (request, response) => {
+    tasks = tasks.filter(task => task.id !== request.params.id)
+
+    response.code(202).send(tasks)
 })
 
 // ROTA POST
@@ -36,32 +41,40 @@ app.post('/tasks', async (request, response) => {
     const newTask = { 
         id: v4(), 
         date: new Date(),
-        done: true,
+        done: false,
         ...request.body 
         }
     tasks.push(newTask)
     response.code(201).send(newTask)
 })
 
+// ROTA PUT
+app.put('/tasks', async (request, response) => {
 
-app.delete('/tasks/:id', async(request, responde) => {
-
-const taskIndex = tasks.findIndex(task => String(task.id) === request.params.id)
-
-    if (taskIndex === -1) {
-        return response.code(404).send({ message: "Tarefa não encontrada." })
+    const body = request.body
+    const index = tasks.findIndex(p => p.id === body.id)
+    if (index === -1) {
+        return { error: "Erro, task não encontrada"}
     }
-  
-        return response.code(200).send({ message: "Tarefa excluída com sucesso." })
+
+    tasks[index] = { ...tasks[index], ...body }
+
+    response.code(200).send(tasks[index])
 })
 
+// ROTA PATCH - UPDATE DONE
+app.patch('/tasks/:id', async (request, response) => {
 
+    //const body = request.body
+    const index = tasks.findIndex(p => p.id === request.params.id)
+    if (index === -1) {
+        return { error: "Erro, task não encontrada"}
+    }
 
+    tasks[index] = { ...tasks[index], "done": !tasks[index].done }
 
-
-
-
-
+    response.code(200).send(tasks[index])
+})
 
 app.listen({ port: 3000 }, (err, address) => {
     if(err) {
