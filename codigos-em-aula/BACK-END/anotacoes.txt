@@ -3,3 +3,44 @@ login pelo github
 
 
 node --watch server.js
+
+
+
+
+-------------
+
+
+
+
+==========
+Fastify
+==========
+
+
+npm init -y
+npm install fastify
+
+nmp install uuid
+
+---
+
+=> acrescentar no json
+"dev": "node --watch server.js"
+
+=> Trocar
+"type": "module",
+
+
+
+localhost:3000
+
+http://localhost:3000/tasks
+http://localhost:3000/tasks/1
+
+
+
+------
+
+
+
+https://labs.google/lll/pt/not-allowed
