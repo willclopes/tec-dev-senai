@@ -1,5 +1,10 @@
 npm create slidev@latest
 
+--> No terminal integrado do VS Code, dentro da pasta do projeto, rode o servidor:
+
+npm install
+npm run dev
+
 
 public slide show   > http://localhost:3030/
   presenter mode      > http://localhost:3030/presenter/
