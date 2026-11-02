@@ -1,0 +1,28 @@
+0: Base: cores.css, GlobalStyle.jsx, main.jsx e App.jsx. Sem isso nada aparece na tela, e o App.jsx pode ficar só com um <h1> no começo.
+
+1: Logo: não depende de nada, só do styled.jsx. Ensina props, styled.div e variáveis var(--cor).
+2: Footer: usa só a Logo. É o primeiro componente que importa outro.
+3: Banner: também independente, e tem animação com keyframes e gradientes.
+
+Botao, Campo e Alerta: independentes. Ensinam props como variante e children, e você vai usá-los em todas as páginas.
+
+
+
+
+Header: primeiro faça a versão fixa, com links soltos e sem login. Depois ligue o useAuth para o menu mudar conforme o perfil.
+Página de Login só visual: monte Banner, containers divididos e Botao/Campo, sem lógica. Depois acrescente o react-hook-form.
+Banco e rotas: db.json, services/api.js, AuthContext e routes/index.jsx com RotaPrivada. Aqui entram useContext e react-router-dom.
+Tarefas: é o CRUD completo. Comece só com o Read (listar), depois Create, Update e Delete, um de cada vez.
+Assinatura e Admin: reaproveitam o que você já aprendeu.
+Cripto, Favoritos e Conversor: por último, porque dependem da API externa e dos hooks personalizados.
+
+Em cada etapa, faça primeiro a parte visual e só depois a lógica. Assim você sempre vê algo funcionando na tela.
+
+
+
+
+
+-> Logo
+
+importar o cores.css no MAIN
+

@@ -1,0 +1,83 @@
+:root {
+  /* ---------- FUNDOS E SUPERFÍCIES ---------- */
+  --cor-fundo: #f6f7ff;
+  --cor-superficie: #ffffff; /* cards e formulários */
+  --cor-superficie-vidro: rgba(255, 255, 255, 0.78); /* branco meio transparente */
+  --cor-superficie-suave: #f3f4ff; /* fundo dos inputs e áreas internas */
+  --cor-vidro-forte: rgba(255, 255, 255, 0.65); /* detalhes sobre o banner */
+  --cor-borda: #e3e6f8;
+  --cor-borda-forte: #c9cdf0;
+
+  /* ---------- TEXTOS (escuros, alto contraste) ---------- */
+  --cor-texto: #1e1b4b;
+  --cor-texto-suave: #4b5073;
+  --cor-texto-claro: #ffffff; /* texto branco sobre botões coloridos */
+
+  /* ---------- CORES DA MARCA ---------- */
+  --cor-primaria: #4f46e5; /* índigo */
+  --cor-primaria-clara: #e0e7ff;
+  --cor-secundaria: #c026d3; /* fúcsia */
+  --cor-secundaria-clara: #fae8ff;
+  --cor-destaque: #0891b2; /* ciano */
+  --cor-destaque-clara: #cffafe;
+  --cor-estrela: #f59e0b; /* estrela dos favoritos */
+
+  /* ---------- STATUS (sucesso, erro, aviso) ---------- */
+  --cor-sucesso: #059669;
+  --cor-sucesso-clara: #d1fae5;
+  --cor-sucesso-texto: #065f46;
+
+  --cor-erro: #dc2626;
+  --cor-erro-clara: #fee2e2;
+  --cor-erro-texto: #991b1b;
+
+  --cor-aviso: #d97706;
+  --cor-aviso-clara: #fef3c7;
+  --cor-aviso-texto: #92400e;
+
+  /* ---------- GRADIENTES ---------- */
+  /* Fundo do site: pastel suave (azul claro -> rosa -> ciano) */
+  --gradiente-fundo: linear-gradient(135deg, #eef2ff 0%, #fdf2f8 50%, #ecfeff 100%);
+
+  /* Banner do topo do login */
+  --gradiente-banner: linear-gradient(120deg, #c7d2fe 0%, #fbcfe8 50%, #a5f3fc 100%);
+
+  /* Botões e destaques */
+  --gradiente-primario: linear-gradient(135deg, #4f46e5 0%, #c026d3 100%);
+  --gradiente-primario-hover: linear-gradient(135deg, #4338ca 0%, #a21caf 100%);
+  --gradiente-sucesso: linear-gradient(135deg, #059669 0%, #0891b2 100%);
+  --gradiente-perigo: linear-gradient(135deg, #dc2626 0%, #e11d48 100%);
+
+  /* Selos dos perfis de usuário */
+  --gradiente-admin: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+  --gradiente-premium: linear-gradient(135deg, #d97706 0%, #db2777 100%);
+  --gradiente-free: linear-gradient(135deg, #64748b 0%, #475569 100%);
+
+  /* Fundos pastel dos cards de resumo */
+  --gradiente-card-pendente: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
+  --gradiente-card-concluida: linear-gradient(135deg, #d1fae5 0%, #cffafe 100%);
+  --gradiente-card-primario: linear-gradient(135deg, #e0e7ff 0%, #fae8ff 100%);
+  --gradiente-card-info: linear-gradient(135deg, #cffafe 0%, #e0e7ff 100%);
+
+  /* Fundo dos ícones dentro dos cards de resumo */
+  --gradiente-icone-pendente: linear-gradient(135deg, #d97706 0%, #e11d48 100%);
+  --gradiente-icone-info: linear-gradient(135deg, #0891b2 0%, #4f46e5 100%);
+
+  /* Bolhas decorativas do banner */
+  --cor-bolha-rosa: rgba(244, 114, 182, 0.45);
+  --cor-bolha-azul: rgba(99, 102, 241, 0.35);
+  --cor-bolha-ciano: rgba(34, 211, 238, 0.4);
+
+  /* ---------- SOMBRAS (leves) ---------- */
+  --sombra-suave: 0 4px 20px rgba(79, 70, 229, 0.08);
+  --sombra-media: 0 12px 32px rgba(79, 70, 229, 0.14);
+  --sombra-botao: 0 8px 20px rgba(79, 70, 229, 0.3);
+  --sombra-perigo: 0 8px 20px rgba(220, 38, 38, 0.25);
+
+  /* ---------- MEDIDAS E FONTE (não são cores, mas ajudam a padronizar) ---------- */
+  --raio-pequeno: 10px;
+  --raio-medio: 16px;
+  --raio-grande: 24px;
+  --raio-total: 999px; /* deixa o elemento totalmente arredondado (pílula) */
+  --fonte: "Poppins", "Segoe UI", system-ui, sans-serif;
+}
