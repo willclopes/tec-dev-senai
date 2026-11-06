@@ -1,0 +1,76 @@
+/* altere as cores aqui; os styled.jsx usam var(--nome). */
+:root {
+  --background: #faf9f5;
+  --surface: #ffffff;
+  --ink: #202b35;
+  --muted: #72808b;
+  --line: #e8e9e4;
+  --coral: #f46d62;
+  --coral-dark: #df574e;
+  --lilac: #9a8df4;
+  --mint: #64cdb3;
+  --mint-dark: #299d84;
+  --lemon: #f7db78;
+  --sky: #a4d4f3;
+  --cream: #fff5e1;
+  --pale-pink: #ffe5e0;
+  --pale-mint: #e7f8ed;
+  --pale-lilac: #f0ecff;
+  --shadow: 0 20px 55px rgba(38, 53, 62, 0.06);
+  --shadow-hover: 0 22px 42px rgba(38, 53, 62, 0.11);
+  /* Transparências centralizadas para evitar cores soltas em styled.jsx. */
+  --glass-header: rgba(250, 249, 245, 0.89);
+  --surface-95: rgba(255, 255, 255, 0.95);
+  --surface-80: rgba(255, 255, 255, 0.8);
+  --surface-75: rgba(255, 255, 255, 0.75);
+  --surface-70: rgba(255, 255, 255, 0.7);
+  --surface-65: rgba(255, 255, 255, 0.65);
+  --surface-56: rgba(255, 255, 255, 0.56);
+  --surface-50: rgba(255, 255, 255, 0.5);
+  --column-yellow: rgba(255, 249, 228, 0.78);
+  --column-mint: rgba(232, 249, 240, 0.83);
+  --logo-shadow: 0 7px 18px rgba(244, 109, 98, 0.18);
+  --task-shadow: 0 10px 24px rgba(32, 43, 53, 0.03);
+  --gradient-brand: linear-gradient(120deg, var(--coral), #f7a56e 54%, var(--lemon));
+  --gradient-page:
+    radial-gradient(ellipse at 4% 0%, #ffe9de 0%, transparent 35%),
+    radial-gradient(ellipse at 94% 20%, #e7e2ff 0%, transparent 30%),
+    radial-gradient(ellipse at 50% 90%, #e0f7e9 0%, transparent 40%), var(--background);
+  --gradient-banner: linear-gradient(113deg, #ffdbcb 0%, #fff0d4 42%, #d7f3dc 76%, #cfeafa 100%);
+
+  /* Cada página pode ter seu próprio fundo, mantendo o mesmo modo claro. */
+  --gradient-page-auth:
+    radial-gradient(ellipse at 8% 5%, #ffe3d7 0%, transparent 42%),
+    radial-gradient(ellipse at 90% 80%, #e7f8d5 0%, transparent 45%), #fcfaf6;
+  --gradient-page-tarefas:
+    radial-gradient(ellipse at 12% 9%, #fff0c5 0%, transparent 40%),
+    radial-gradient(ellipse at 94% 76%, #ddf7e8 0%, transparent 44%), #fbfaf4;
+  --gradient-page-cripto:
+    radial-gradient(ellipse at 12% 6%, #dfe8ff 0%, transparent 43%),
+    radial-gradient(ellipse at 91% 72%, #e9e1ff 0%, transparent 48%), #f9faff;
+  --gradient-page-favoritos:
+    radial-gradient(ellipse at 5% 8%, #ffe0e9 0%, transparent 42%),
+    radial-gradient(ellipse at 92% 82%, #f0e4ff 0%, transparent 48%), #fffafc;
+  --gradient-page-conversor:
+    radial-gradient(ellipse at 12% 7%, #d6f7ed 0%, transparent 45%),
+    radial-gradient(ellipse at 90% 74%, #dcedff 0%, transparent 48%), #f8fcfc;
+  --gradient-page-assinatura:
+    radial-gradient(ellipse at 6% 12%, #fff1bc 0%, transparent 43%),
+    radial-gradient(ellipse at 94% 74%, #ffe0d2 0%, transparent 44%), #fffcf6;
+  --gradient-page-admin:
+    radial-gradient(ellipse at 8% 7%, #d6f3e7 0%, transparent 44%),
+    radial-gradient(ellipse at 94% 73%, #daeeff 0%, transparent 47%), #f8fcfb;
+
+  /* O mesmo Banner recebe cores diferentes pela propriedade $variant. */
+  --gradient-banner-auth: linear-gradient(115deg, #ffddce, #fff0d8 46%, #d9f2de);
+  --gradient-banner-tarefas: linear-gradient(115deg, #ffdbc5, #fff0c0 57%, #def6d5);
+  --gradient-banner-cripto: linear-gradient(115deg, #cbdcff, #e1ddff 57%, #d9e9ff);
+  --gradient-banner-favoritos: linear-gradient(115deg, #ffd5e4, #f6ddf5 50%, #e5dcff);
+  --gradient-banner-conversor: linear-gradient(115deg, #cef3e6, #dcf9f1 48%, #d7e8ff);
+  --gradient-banner-assinatura: linear-gradient(115deg, #ffe5a7, #ffe1cb 52%, #f3e0ff);
+  --gradient-banner-admin: linear-gradient(115deg, #c9f1df, #dcf6e9 48%, #cce9ff);
+
+  /* Superfícies suaves para cartões específicos. */
+  --gradient-card-cripto: linear-gradient(155deg, #ffffff, #f1f3ff);
+  --gradient-card-favoritos: linear-gradient(155deg, #ffffff, #fff0f7);
+}

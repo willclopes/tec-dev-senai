@@ -1,0 +1,18 @@
+ordem de desenvolvimento 
+
+Menos Independente -> mais Independente
+
+
+Ordem	O que desenvolver	Por quê?
+1	palette.css	Define as cores e os gradientes
+2	GlobalStyles.js	Define os estilos gerais do site
+3	Logo	Componente simples e reutilizável
+4	Banner	Ótimo para aprender props
+5	Footer	Tem pouca lógica
+6	Header	Comece pelo visual; depois adicione a lógica de login
+7	Router	Organiza as páginas e seus caminhos
+8	Página de Login/Cadastro	Primeira página com formulários
+9	Página de Tarefas	Aprenda useState e CRUD
+10	API + Banco de Dados	Conecte as funcionalidades à persistência
+11	Cripto, Favoritos e Conversor	Trabalhe com APIs externas
+12	Assinatura e Administrador	Implemente as regras dos perfis
