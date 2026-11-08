@@ -1,0 +1,2 @@
+1. colocar o palette.css em Main.jsx
+2. importar o GlobalStyles em APP.jsx
