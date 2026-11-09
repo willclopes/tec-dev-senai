@@ -1,0 +1,46 @@
+/*
+ * PALETA NODIA
+ * Troque qualquer cor ou gradiente AQUI para alterar o projeto todo.
+ * Os arquivos styled.jsx usam var(--nome), sem repetir códigos de cores.
+ */
+:root {
+  --page: #f6f7ff;
+  --white: #ffffff;
+  --panel: #ffffffea;
+  --ink: #20223f;
+  --ink-soft: #3f4367;
+  --muted: #777c9c;
+  --line: #e8e9f4;
+  --line-strong: #d8d9eb;
+  --purple: #6b5cff;
+  --purple-dark: #5141d9;
+  --purple-soft: #eeebff;
+  --blue: #439fff;
+  --blue-soft: #e8f3ff;
+  --coral: #ff786c;
+  --coral-soft: #fff0e9;
+  --lime: #c6f67e;
+  --lime-soft: #f0fbdd;
+  --mint: #44bda9;
+  --mint-soft: #dff9f4;
+  --warning: #d98739;
+  --warning-soft: #fff4e4;
+  --danger: #d45373;
+  --danger-soft: #ffedf2;
+  --success: #258d76;
+  --success-soft: #e4faf0;
+  --gradient-page: radial-gradient(circle at 8% 10%, #e6e4ff 0, transparent 37%),
+    radial-gradient(circle at 90% 2%, #e6f6ff 0, transparent 31%),
+    radial-gradient(circle at 70% 90%, #ffe8e2 0, transparent 36%),
+    #f6f7ff;
+  --gradient-hero: linear-gradient(115deg, #6254ec 0%, #8e78f7 43%, #ff9386 100%);
+  --gradient-hero-blue: linear-gradient(115deg, #397acb 0%, #7370df 55%, #9f77e9 100%);
+  --gradient-logo: linear-gradient(145deg, #7465ff 0%, #4b9cff 70%, #66d1c2 100%);
+  --gradient-lime: linear-gradient(130deg, #dcff9e, #9debd3);
+  --gradient-coral: linear-gradient(130deg, #ffded0, #ffc1b6);
+  --gradient-soft: linear-gradient(130deg, #f5f2ff, #eff8ff);
+  --shadow-card: 0 24px 70px -40px #36335b55;
+  --shadow-hover: 0 24px 55px -30px #645edc77;
+  --shadow-small: 0 8px 26px -17px #30345c45;
+  --shadow-button: 0 13px 25px -13px #6254ec99;
+}
