@@ -1,0 +1,37 @@
+/*
+ * PALETA TROPICAL TECHSTOCK — ROXO ORQUÍDEA + CORAL
+ * As cores vivem SOMENTE aqui. Os styled.jsx usam var(--nome).
+ * É fácil experimentar outro visual alterando estas variáveis.
+ * Mantivemos os nomes das variáveis para não alterar os componentes.
+ */
+:root {
+  --background: #fffbff;
+  --surface: #ffffff;
+  --text: #392d4a;
+  --muted: #80728d;
+  --line: #efe4f3;
+
+  --green: #8146b8;
+  --green-dark: #60318f;
+  --green-soft: #f1e5fd;
+  --coral: #f46c7b;
+  --coral-dark: #b4455d;
+  --coral-soft: #ffe7e9;
+  --yellow: #c27a32;
+  --yellow-soft: #fff0db;
+  --blue: #7774c8;
+  --blue-soft: #eeebff;
+
+  --gradient-page: radial-gradient(ellipse at 2% 6%, #f4e9ff 0, transparent 35%), radial-gradient(ellipse at 93% 4%, #ffe8eb 0, transparent 34%), linear-gradient(180deg, #fffaff 0%, #fffbff 100%);
+  --gradient-banner: linear-gradient(108deg, #fff0e2 0%, #f2e4ff 54%, #ffe5ee 100%);
+  --gradient-logo: linear-gradient(135deg, #7542b8 0%, #b85ec8 54%, #f57281 100%);
+  --gradient-button: linear-gradient(105deg, #9153ca 0%, #d66ab1 50%, #f77b75 100%);
+  --gradient-total: linear-gradient(135deg, #f5e7ff, #fffafe);
+  --gradient-available: linear-gradient(135deg, #ede1ff, #f7eeff);
+  --gradient-loaned: linear-gradient(135deg, #ffe4e7, #fff3e9);
+  --gradient-maintenance: linear-gradient(135deg, #ecebff, #f8f1ff);
+
+  --shadow: 0 14px 45px rgba(99, 55, 126, 0.09);
+  --shadow-hover: 0 17px 38px rgba(99, 55, 126, 0.16);
+}
+
