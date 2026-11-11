@@ -1,0 +1,32 @@
+
+## DOCKER
+
+                        trocar                       trocar                   trocar                                         
+docker run -d --name techstock_db -e MYSQL_ROOT_PASSWORD=123 -e MYSQL_DATABASE=techstock -p 3307:3306 mysql:8
+
+* O comando acima já cria o banco de dados, após "docker exec" entrar direto no Banco.
+
+docker ps (lista os containers) - pegar o id do container
+docker exec -it <id do container> mysql -u root -p
+use my-data-base
+
+
+## Query para Inicialização Banco
+
+
+CREATE DATABASE IF NOT EXISTS techstock;
+
+
+USE techstock;
+
+CREATE TABLE IF NOT EXISTS equipamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR (120) NOT NULL,
+    categoria VARCHAR (100) NOT NULL,
+    numero_serie VARCHAR (100) NOT NULL UNIQUE,
+    status ENUM('disponivel', 'emprestado', 'manutencao') NOT NULL,
+    data_aquisicao DATE NOT NULL
+);
+
+INSERT INTO equipamentos(nome, categoria, numero_serie, status, data_aquisicao) VALUES ('MacBook Air M2', 'Notebook', 'TS-NB-001', 'emprestado', '2026-02-10');
+INSERT INTO equipamentos(nome, categoria, numero_serie, status, data_aquisicao) VALUES ('Dell Latitude 5440', 'Notebook', 'TS-NB-002', 'disponivel', '2026-01-15');

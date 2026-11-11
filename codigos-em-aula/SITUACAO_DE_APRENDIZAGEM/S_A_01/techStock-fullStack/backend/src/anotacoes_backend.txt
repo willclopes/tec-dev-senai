@@ -1,0 +1,19 @@
+1. Modelar o banco de dados
+2. Configurar o Docker + criar o BD
+
+3. Instalar os arquivos de conf. pro BackEnd
+    npm init -y
+    npm install fastify
+    npm install uuid
+    npm install dotenv 
+    npm i @fastify/cors
+
+4. Configurar o package.json
+    => acrescentar no json
+        "dev": "node --watch server.js"
+    => Trocar
+        "type": "module",
+
+5. Criar .env e .env_exemple
+
+6. Criar os arquivos/pastas (controller, database, routes, services)
