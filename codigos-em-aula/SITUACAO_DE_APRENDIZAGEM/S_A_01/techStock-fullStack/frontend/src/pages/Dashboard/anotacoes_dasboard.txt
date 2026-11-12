@@ -1,0 +1,240 @@
+
+import {
+  ContainerPrincipal,   Indicadores, Card, NumeroCard, LegendaCard, Grade, Painel, TituloPainel, DescricaoPainel, Formulario,
+  CampoFormulario, BotaoCadastro, TabelaContainer, Tabela, Status, BotaoAcao, Paginacao } from "./styled.jsx";
+
+export default function Dashboard() {
+  return (
+    <ContainerPrincipal>
+
+     <Indicadores>
+
+        <Card $tipo="total">
+          <LegendaCard>Total e ativos</LegendaCard>
+          <NumeroCard>18</NumeroCard>
+          <LegendaCard>Equipamentos cadastrados</LegendaCard>
+        </Card>
+
+        <Card $tipo="disponiveis">
+          <LegendaCard>Disponíveis</LegendaCard>
+          <NumeroCard>10</NumeroCard>
+          <LegendaCard>Prontos para utilização</LegendaCard>
+        </Card>
+
+        <Card $tipo="emprestados">
+          <LegendaCard>Emprestados</LegendaCard>
+          <NumeroCard>5</NumeroCard>
+          <LegendaCard>Em utilização</LegendaCard>
+        </Card>
+
+        <Card $tipo="manutencao">
+          <LegendaCard>Em manutenção</LegendaCard>
+          <NumeroCard>3</NumeroCard>
+          <LegendaCard>Aguardando liberação</LegendaCard>
+        </Card>
+
+      </Indicadores>
+
+     
+
+      <Grade>
+
+        {/* LADO ESQUERDO - FORMULARIO DOS CADASTROS - CADASTRO */}
+
+        <Painel>
+
+          <TituloPainel>Cadastrar equipamento</TituloPainel>
+
+          <DescricaoPainel>
+            Preencha os dados do novo equipamento.
+          </DescricaoPainel>
+
+          <Formulario>
+
+            <CampoFormulario>
+              <label htmlFor="nome">
+                Nome do equipamento
+              </label>
+
+              <input
+                id="nome"
+                type="text"
+                placeholder="Ex.: Notebook Dell"
+              />
+            </CampoFormulario>
+
+            <CampoFormulario>
+              <label htmlFor="categoria">
+                Categoria
+              </label>
+
+              <select id="categoria" defaultValue="">
+                <option value="" disabled>
+                  Selecione uma categoria
+                </option>
+
+                <option value="notebook">Notebook</option>
+                <option value="monitor">Monitor</option>
+                <option value="mouse">Mouse</option>
+                <option value="teclado">Teclado</option>
+                <option value="outro">Outro</option>
+              </select>
+            </CampoFormulario>
+
+            <CampoFormulario>
+              <label>
+                Número de série
+              </label>
+
+              <input
+                id="serie"
+                type="text"
+                placeholder="Ex.: TS-NB-001"
+              />
+            </CampoFormulario>
+
+            <CampoFormulario>
+              <label>
+                Situação
+              </label>
+
+              <select
+                id="situacao"
+                defaultValue="disponivel"
+              >
+                <option value="disponivel">
+                  Disponível
+                </option>
+
+                <option value="emprestado">
+                  Emprestado
+                </option>
+
+                <option value="manutencao">
+                  Em manutenção
+                </option>
+              </select>
+            </CampoFormulario>
+
+            <CampoFormulario>
+              <label>
+                Data de aquisição
+              </label>
+
+              <input
+                id="data"
+                type="date"
+              />
+            </CampoFormulario>
+
+            <BotaoCadastro type="button">
+              + Cadastrar equipamento
+            </BotaoCadastro>
+
+          </Formulario>
+
+        </Painel>
+
+
+        <Painel>
+
+          <TituloPainel>Catálogo de ativos</TituloPainel>
+
+          <DescricaoPainel>
+            Equipamentos cadastrados na empresa.
+          </DescricaoPainel>
+
+          <TabelaContainer>
+
+            <Tabela>
+
+              <thead>
+                <tr>
+                  <th>Equipamento</th>
+                  <th>Categoria</th>
+                  <th>Situação</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>Notebook Dell</td>
+                  <td>Notebook</td>
+
+                  <td>
+                    <Status $status="disponivel">
+                      Disponível
+                    </Status>
+                  </td>
+
+                  <td>
+                    <BotaoAcao type="button">
+                      Editar
+                    </BotaoAcao>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Monitor LG</td>
+                  <td>Monitor</td>
+
+                  <td>
+                    <Status $status="emprestado">
+                      Emprestado
+                    </Status>
+                  </td>
+
+                  <td>
+                    <BotaoAcao type="button">
+                      Editar
+                    </BotaoAcao>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Mouse Logitech</td>
+                  <td>Mouse</td>
+
+                  <td>
+                    <Status $status="manutencao">
+                      Em manutenção
+                    </Status>
+                  </td>
+
+                  <td>
+                    <BotaoAcao type="button">
+                      Editar
+                    </BotaoAcao>
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </Tabela>
+
+          </TabelaContainer>
+
+
+          <Paginacao>
+
+            <button type="button">
+              Anterior
+            </button>
+
+            <span>Página 1 de 2</span>
+
+            <button type="button">
+              Próximo
+            </button>
+
+          </Paginacao>
+
+        </Painel>
+
+      </Grade>
+
+    </ContainerPrincipal>
+  );
+}

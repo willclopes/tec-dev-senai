@@ -1,6 +1,7 @@
 import './App.css'
-import { Logo } from './components/Logo'
-
+import Footer from './components/Footer'
+import Header from './components/Header'
+import Dashboard from './pages/Dashboard'
 import NotFound from './pages/NotFound'
 
 export function App() {
@@ -8,8 +9,10 @@ export function App() {
 
   return (
     <>
-    <Logo />
+    <Header />
+    <Dashboard />
      <NotFound />
+     <Footer />
     </>
   )
 }

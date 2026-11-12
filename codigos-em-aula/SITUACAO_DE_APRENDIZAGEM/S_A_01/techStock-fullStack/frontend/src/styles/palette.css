@@ -33,5 +33,63 @@
 
   --shadow: 0 14px 45px rgba(99, 55, 126, 0.09);
   --shadow-hover: 0 17px 38px rgba(99, 55, 126, 0.16);
+
+
+
+/* CORES EXCLUSIVAS DO DASHBOARD */
+
+/* Fundo dos quatro Cards */
+--dash-card-total: linear-gradient(
+  135deg,
+  #e6d2ff,
+  #c99afa
+);
+
+--dash-card-disponiveis: linear-gradient(
+  135deg,
+  #ffd9e4,
+  #ff9fbf
+);
+
+--dash-card-emprestados: linear-gradient(
+  135deg,
+  #ffe6ca,
+  #ffbf97
+);
+
+--dash-card-manutencao: linear-gradient(
+  135deg,
+  #efd7ff,
+  #e1a7ed
+);
+
+/* Cor de destaque dos campos */
+--dash-focus: #a75ce5;
+
+/* Situação: Disponível */
+--dash-status-disponivel-bg: #efe0ff;
+--dash-status-disponivel-text: #7630a8;
+
+/* Situação: Emprestado */
+--dash-status-emprestado-bg: #ffe0e8;
+--dash-status-emprestado-text: #b73562;
+
+/* Situação: Em manutenção */
+--dash-status-manutencao-bg: #fff0c8;
+--dash-status-manutencao-text: #956111;
+
+/* Botão Editar */
+--dash-action-bg: #f1e5ff;
+--dash-action-text: #7934a8;
+
+
+
+
+
+
+
+
+
+
 }
 
