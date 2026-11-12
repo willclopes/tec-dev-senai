@@ -1,4 +1,4 @@
-import { deleteEquipamentosService, getAllEquipamentos, getEquipamentosById, patchEquipamentosService, postEquipamentos, putEquipamentosService } from "../services/equipamentos-services.js"
+import { deleteEquipamentoService, getAllEquipamentos, getEquipamentoById, patchEquipamentoService, postEquipamento, putEquipamentoService } from "../services/equipamentos-services.js"
 
 
 export async function listAllEquipamentos(request, response){
@@ -8,7 +8,7 @@ export async function listAllEquipamentos(request, response){
 }
 
 export async function listEquipamentosById(request, response){
-        const equipamentos = await getEquipamentosById(request.params.id)
+        const equipamentos = await getEquipamentoById(request.params.id)
 
         if(!equipamentos) {
             response.code(404).send({ message: "Equipamentos not found!"})
@@ -18,25 +18,25 @@ export async function listEquipamentosById(request, response){
 }
 
 export async function createEquipamentos(request, response) {
-        const newEquipamentos = await postEquipamentos(request.body)
+        const newEquipamentos = await postEquipamento(request.body)
 
         response.code(201).send(newEquipamentos)
 }
 
-export async function deleteEquipamentos(request, response){
-        const message = await deleteEquipamentosService(request.params.id)
+export async function deleteEquipamento(request, response){
+        const message = await deleteEquipamentoService(request.params.id)
 
         response.code(202).send({ message: message })
     }
 
 export async function putEquipamentos(request, response) {
-        const message = await putEquipamentosService(request.params.id, request.body)
+        const message = await putEquipamentoService(request.params.id, request.body)
 
         response.code(200).send({ message:  message})
 }
 
 export async function patchEquipamentos(request, response){
-        const message = await patchEquipamentosService(request.params.id, request.body)
+        const message = await patchEquipamentoService(request.params.id, request.body)
 
         response.code(200).send({ message: message })
 }

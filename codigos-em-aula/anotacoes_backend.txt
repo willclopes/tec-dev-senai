@@ -1,0 +1,175 @@
+insomnia
+login pelo github
+
+
+node --watch server.js
+
+
+
+
+-------------
+
+
+
+
+==========
+Fastify
+==========
+
+
+npm init -y
+npm install fastify
+
+nmp install uuid
+
+
+npm install dotenv 
+
+---
+
+=> acrescentar no json
+"dev": "node --watch server.js"
+
+=> Trocar
+"type": "module",
+
+
+
+localhost:3000
+
+http://localhost:3000/tasks
+http://localhost:3000/tasks/1
+
+
+
+area de trabalho, imagem, documento
+
+------
+
+
+
+https://labs.google/lll/pt/not-allowed
+
+
+
+
+----
+
+
+https://github.com/daniellichotti/Tecnico-de-Desenvolvimento-de-Sistemas
+
+---
+
+
+https://github.com/willclopes/senai_aulas_algoritimos/blob/main/Comandos%20MySQL.md
+
+
+
+---
+
+
+
+modelo 
+
+const app = Fastify({ logger: true })
+
+// listar todos usuarios
+app.get()
+// listar um usuario
+app.get()
+// Cadastrar um usuario
+app.post()
+// Deletar um usuario
+app.delete()
+// Atualizar todo o usuario
+app.put()
+// Atualizar parcialmente um usuario
+app.patch()
+
+app.listen({ port: 3000 }, (err, address) => {
+    if(err) {
+        app.log.error(err)
+        process.exit(1)
+    }
+
+    console.log(`Servidor rodando em ${address}`)
+})
+
+
+
+--
+
+
+docker run -d --name user-db-sql -e MYSQL_ROOT_PASSWORD=123 -e MYSQL_DATABASE=my-data-base -p 3307:3306 mysql:8
+
+docker run -d --name techstock-db-sql -e MYSQL_ROOT_PASSWORD=123 -e MYSQL_DATABASE=techstock_db -p 3307:3306 mysql:8
+
+
+
+docker ps (lista os containers)
+docker exec -it (ID DO CONTANINER) mysql -u root -p
+use my-data-base
+
+
+CREATE DATABASE IF NOT EXISTS techstock;
+USE techstock;
+
+CREATE TABLE IF NOT EXISTS equipamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(120) NOT NULL,
+    categoria VARCHAR(60) NOT NULL,
+    numero_serie VARCHAR(100) NOT NULL UNIQUE,
+    status VARCHAR(50) NOT NULL,
+    data_aquisicao VARCHAR(150) NOT NULL
+);
+
+INSERT INTO equipamentos (nome, categoria, numero_serie, status, data_aquisicao) VALUES
+('MacBook Air M2', 'Notebook', 'NS-NB-001', 'emprestado', '2026-02-10'),
+('Dell Latitude 5440', 'Notebook', 'NS-NB-002', 'disponivel', '2026-01-15'),
+('Lenovo ThinkPad E14', 'Notebook', 'NS-NB-003', 'manutencao', '2025-11-20'),
+('Acer Aspire 5', 'Notebook', 'NS-NB-004', 'disponivel', '2026-03-06'),
+('Monitor LG UltraWide 29', 'Monitor', 'NS-MN-005', 'disponivel', '2025-09-14'),
+('Monitor Dell 24', 'Monitor', 'NS-MN-006', 'emprestado', '2026-04-04'),
+('Monitor Samsung 27', 'Monitor', 'NS-MN-007', 'disponivel', '2026-03-18'),
+('Monitor AOC 24', 'Monitor', 'NS-MN-008', 'manutencao', '2025-08-07'),
+('Mouse Logitech MX Master', 'Mouse', 'NS-MS-009', 'emprestado', '2026-01-21'),
+('Mouse Microsoft Bluetooth', 'Mouse', 'NS-MS-010', 'disponivel', '2026-02-11'),
+('Mouse Logitech M720', 'Mouse', 'NS-MS-011', 'disponivel', '2025-12-03'),
+('Teclado Logitech K380', 'Teclado', 'NS-TC-012', 'emprestado', '2025-09-29'),
+('Teclado Keychron K2', 'Teclado', 'NS-TC-013', 'disponivel', '2026-04-13'),
+('Headset HyperX Cloud', 'Headset', 'NS-HD-014', 'disponivel', '2026-05-06'),
+('Headset Jabra Evolve2', 'Headset', 'NS-HD-015', 'manutencao', '2026-02-19'),
+('Dock Station Dell WD19', 'Acessório', 'NS-AC-016', 'emprestado', '2026-01-12'),
+('Webcam Logitech C920', 'Acessório', 'NS-AC-017', 'disponivel', '2025-10-23'),
+('Hub USB-C Anker', 'Acessório', 'NS-AC-018', 'disponivel', '2026-03-30');
+
+
+
+
+------
+
+docker start 3c1fc700e59f
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE usuarios (
+     id VARCHAR(36) PRIMARY KEY,
+     name VARCHAR(100) NOT NULL,
+     email VARCHAR(100) NOT NULL UNIQUE,
+     password VARCHAR(255) NOT NULL,
+     createdAt VARCHAR(20) NOT NULL
+ );
+
+ INSERT INTO usuarios (id, name, email, password, createdAt)
+ VALUES ('123e4567-e89b-12d3-a456-426614174000', 'Pedro', 'pedrinho@yahoo.com', '123', '10-10-10');

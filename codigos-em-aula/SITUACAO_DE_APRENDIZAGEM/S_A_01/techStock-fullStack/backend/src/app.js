@@ -1,5 +1,6 @@
 import Fastify from "fastify";
 import cors from "@fastify/cors"
+import { equipamentosRoutes } from './routes/equipamentos-routes.js'
 
 
 export function buildApp() {
@@ -8,7 +9,7 @@ export function buildApp() {
 
     app.register(cors, {origin: '*'})
 
-    app.register(userRouters, {prefix: '/equipamentos'})
+    app.register(equipamentosRoutes, {prefix: '/equipamentos'})
 
 
     return app

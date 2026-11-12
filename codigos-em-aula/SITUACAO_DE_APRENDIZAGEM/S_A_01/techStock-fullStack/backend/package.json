@@ -13,8 +13,11 @@
   "type": "module",
   "dependencies": {
     "@fastify/cors": "^11.4.1",
+    "cors": "^2.8.6",
     "dotenv": "^18.0.9",
+    "express": "^5.3.0",
     "fastify": "^5.12.8",
+    "mysql2": "^3.24.6",
     "uuid": "^14.0.3"
   }
 }

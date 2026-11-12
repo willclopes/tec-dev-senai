@@ -1,0 +1,3 @@
+docker run -d --name techstock-db-sql -e MYSQL_ROOT_PASSWORD=123 -e MYSQL_DATABASE=techstock_db -p 3307:3306 mysql:8
+
+
