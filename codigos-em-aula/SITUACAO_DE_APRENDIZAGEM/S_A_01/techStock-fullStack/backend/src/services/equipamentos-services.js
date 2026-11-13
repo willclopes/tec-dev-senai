@@ -14,9 +14,9 @@ export async function getEquipamentoById(id) {
 }
 
 export async function postEquipamento(body) {
-    const { name, email, password } = body
+    const {nome, categoria, numero_serie, status, data_aquisicao  } = body
 
-    const equipamento = await db.query("INSERT INTO equipamentos (id, name, email, password, createdAt) VALUES (?, ?, ?, ?, ?)", [v4(), name, email, password, "arroz"])
+    const equipamento = await db.query("INSERT INTO equipamentos (nome, categoria, numero_serie, status, data_aquisicao) VALUES (?, ?, ?, ?, ? )", [ nome, categoria, numero_serie, status, data_aquisicao])
     
     return equipamento
 }
