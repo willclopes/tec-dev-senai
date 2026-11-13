@@ -26,6 +26,24 @@
   --gradient-loaned: linear-gradient(135deg, #ffbfcd, #ffe4d7);
   --gradient-maintenance: linear-gradient(135deg, #d1c9ff, #eee0ff);
 
+
+/* Gradiente para mensagens de sucesso */
+--gradient-success: linear-gradient(
+  120deg,
+  #16a98c 0%,
+  #24c5ab 55%,
+  #65d5b4 100%
+);
+
+/* Gradiente para mensagens de atenção */
+--gradient-warning: linear-gradient(
+  120deg,
+  #ee5e76 0%,
+  #ff856e 55%,
+  #ffb16c 100%
+);
+
+
   --shadow: 0 14px 45px rgba(99, 40, 135, 0.12);
   --shadow-hover: 0 17px 38px rgba(99, 40, 135, 0.19);
 

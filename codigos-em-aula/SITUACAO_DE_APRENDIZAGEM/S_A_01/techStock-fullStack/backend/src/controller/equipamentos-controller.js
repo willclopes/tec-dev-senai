@@ -2,10 +2,29 @@ import { deleteEquipamentoService, getAllEquipamentos, getEquipamentoById, patch
 
 
 export async function listAllEquipamentos(request, response){
+    const { page = 1, limit = 10 } = request.query
+    
+    const equipamentos = await getAllEquipamentos(page, limit)
+
+    return response.code(200).send(equipamentos)
+}
+
+
+
+
+/*
+
+export async function listAllEquipamentos(request, response){
     const equipamentos = await getAllEquipamentos()
 
     return response.code(200).send(equipamentos)
 }
+
+
+*/
+
+
+
 
 export async function listEquipamentosById(request, response){
         const equipamentos = await getEquipamentoById(request.params.id)
@@ -32,7 +51,11 @@ export async function deleteEquipamento(request, response){
 export async function putEquipamentos(request, response) {
         const message = await putEquipamentoService(request.params.id, request.body)
 
-        response.code(200).send({ message:  message})
+        if (!message) {
+          return response.code(404).send({ message: "equipamento not found!" })
+    }
+    
+        return response.code(200).send({ message: message })
 }
 
 export async function patchEquipamentos(request, response){

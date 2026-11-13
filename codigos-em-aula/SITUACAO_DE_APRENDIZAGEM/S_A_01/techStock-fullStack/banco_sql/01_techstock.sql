@@ -1,5 +1,5 @@
--- CREATE DATABASE IF NOT EXISTS techstock;
-USE techstock;
+-- CREATE DATABASE IF NOT EXISTS techstock_db;
+USE techstock_db;
 
 -- A tabela central de todo o projeto.
 CREATE TABLE IF NOT EXISTS equipamentos (
