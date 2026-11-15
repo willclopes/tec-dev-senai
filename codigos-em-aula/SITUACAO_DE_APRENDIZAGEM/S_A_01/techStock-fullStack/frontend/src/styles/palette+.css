@@ -27,6 +27,13 @@
   --gradient-maintenance: linear-gradient(135deg, #d1c9ff, #eee0ff);
 
 
+
+--dash-border-total: #9848db;
+--dash-border-disponiveis: #24b889;
+--dash-border-emprestados: #f18a53;
+--dash-border-manutencao: #b65bcb;
+
+
 /* Gradiente para mensagens de sucesso */
 --gradient-success: linear-gradient(
   120deg,
@@ -54,42 +61,83 @@
 /* Fundo dos quatro Cards */
 --dash-card-total: linear-gradient(
   135deg,
-  #e6d2ff,
-  #c99afa
+  #e9d5ff 0%,
+  #c99af5 50%,
+  #a978e9 100%
 );
 
+/* Disponíveis — Verde esmeralda tropical */
 --dash-card-disponiveis: linear-gradient(
   135deg,
-  #ffd9e4,
-  #ff9fbf
+  #d4f9e6 0%,
+  #8be6be 50%,
+  #46cba0 100%
 );
 
+/* Emprestados — Coral e pêssego */
 --dash-card-emprestados: linear-gradient(
   135deg,
-  #ffe6ca,
-  #ffbf97
+  #ffe5d8 0%,
+  #ffc19f 50%,
+  #fa987d 100%
 );
 
+/* Em manutenção — Orquídea rosada */
 --dash-card-manutencao: linear-gradient(
   135deg,
-  #efd7ff,
-  #e1a7ed
+  #f9ddf5 0%,
+  #e9ade2 50%,
+  #d17bcb 100%
 );
 
 /* Cor de destaque dos campos */
 --dash-focus: #a75ce5;
 
-/* Situação: Disponível */
---dash-status-disponivel-bg: #efe0ff;
---dash-status-disponivel-text: #7630a8;
 
-/* Situação: Emprestado */
---dash-status-emprestado-bg: #ffe0e8;
---dash-status-emprestado-text: #b73562;
+/* ==========================================
+   STATUS DOS EQUIPAMENTOS - CATÁLOGO
+   ========================================== */
 
-/* Situação: Em manutenção */
---dash-status-manutencao-bg: #fff0c8;
---dash-status-manutencao-text: #956111;
+/* Disponível - Verde esmeralda */
+--dash-status-disponivel-bg: linear-gradient(
+  135deg,
+  #d4f9e6 0%,
+  #a1ebcb 55%,
+  #77ddb6 100%
+);
+--dash-status-disponivel-text: #176b50;
+
+
+/* Emprestado - Coral tropical */
+--dash-status-emprestado-bg: linear-gradient(
+  135deg,
+  #ffe5d8 0%,
+  #ffd0b5 55%,
+  #ffb69d 100%
+);
+--dash-status-emprestado-text: #9b452b;
+
+
+/* Em manutenção - Orquídea rosada */
+--dash-status-manutencao-bg: linear-gradient(
+  135deg,
+  #f9ddf5 0%,
+  #edbee8 55%,
+  #e2a1dc 100%
+);
+--dash-status-manutencao-text: #783477;
+
+
+/* Fundo suave para tabelas e ações */
+--dash-table-bg: linear-gradient(
+  120deg,
+  #f8f3ff 0%,
+  #f5f0fc 50%,
+  #fff5f8 100%
+);
+
+
+
 
 /* Botão Editar */
 --dash-action-bg: #f1e5ff;

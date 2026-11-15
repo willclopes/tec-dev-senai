@@ -1,10 +1,17 @@
 
 import styled from "styled-components";
 
+
+// CONTAINER PRINCIPAL
+
 export const ContainerPrincipal = styled.main`
   max-width: 1300px;
-  margin: 25px auto;
+
+  margin: 25px auto 40px;
+
   padding: 0 30px;
+
+  box-sizing: border-box;
 
   @media (max-width: 600px) {
     padding: 0 16px;
@@ -12,236 +19,284 @@ export const ContainerPrincipal = styled.main`
 `;
 
 
-export const Indicadores = styled.section`
+// CARDS DO DASHBOARD
+
+export const IndicadoresCards = styled.section`
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
+
   gap: 18px;
+
   margin-bottom: 25px;
 
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 
+// PAINEL DE CADASTRO
 
-export const Card = styled.div`
-  padding: 25px;
-  border-radius: 20px;
+export const Painel = styled.section`
+  width: 100%;
 
-  background: ${({ $tipo }) =>
-    `var(--dash-card-${$tipo})`};
+  box-sizing: border-box;
 
-  box-shadow: var(--shadow);
-`;
-
-export const NumeroCard = styled.h2`
-  margin: 10px 0;
-  font-size: 36px;
-  font-weight: 800;
-  color: var(--text);
-`;
-
-
-export const LegendaCard = styled.p`
-  margin: 0;
-  font-size: 13px;
-  color: var(--text);
-`;
-
-// DIVISÃO ENTRE CADASTRO E CATÁLOGO
-
-export const Grade = styled.section`
-  display: grid;
-  grid-template-columns: 380px minmax(0, 1fr);
-  gap: 25px;
-  align-items: start;
-
- `;
-
-export const Painel = styled.div`
-  min-width: 0;
   padding: 25px;
 
   background: var(--surface);
 
   border: 1px solid var(--line);
-  border-radius: 22px;
+
+  border-radius: 20px;
 
   box-shadow: var(--shadow);
+
+  margin-bottom: 25px;
+
+  @media (max-width: 600px) {
+    padding: 18px;
+  }
 `;
 
+
+// TÍTULO DO PAINEL
 
 export const TituloPainel = styled.h2`
   margin: 0 0 8px;
+
   font-size: 21px;
+
   font-weight: 800;
+
   color: var(--text);
 `;
 
-// DESCRIÇÕES
+
+// DESCRIÇÃO DO PAINEL
 
 export const DescricaoPainel = styled.p`
   margin: 0 0 25px;
+
   font-size: 13px;
-  line-height: 1.5;
+
   color: var(--muted);
 `;
 
 
+// FORMULÁRIO
+
 export const Formulario = styled.form`
   display: flex;
+
   flex-direction: column;
-  gap: 18px;
+
+  gap: 20px;
 `;
 
 
+// PRIMEIRA LINHA - TRÊS CAMPOS
+
+export const LinhaCampos = styled.div`
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+
+// CADA CAMPO DO FORMULÁRIO
 
 export const CampoFormulario = styled.div`
   display: flex;
+
   flex-direction: column;
-  gap: 7px;
+
+  gap: 8px;
+
+  min-width: 0;
 
   label {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text);
   }
 
-  input,
-  select {
+  input {
     width: 100%;
+
+    padding: 12px;
+
     box-sizing: border-box;
 
-    padding: 12px 14px;
-
     border: 1px solid var(--line);
-    border-radius: 12px;
+
+    border-radius: 8px;
 
     background: var(--surface);
+
     color: var(--text);
 
     font-size: 14px;
+
     font-family: inherit;
   }
 
-  input:focus,
-  select:focus {
+  input:focus {
     outline: 2px solid var(--dash-focus);
     outline-offset: 1px;
   }
 `;
 
 
-export const BotaoCadastro = styled.button`
-  padding: 14px;
+// SEGUNDA LINHA - TRÊS COLUNAS
+// Categoria | Situação | Botão
 
-  border: none;
-  border-radius: 12px;
+export const LinhaOpcoes = styled.div`
+  display: grid;
 
-  background: var(--gradient-logo);
-  color: var(--surface);
+  /* Larguras compactas dos três elementos */
+  grid-template-columns: 2fr 1.2fr 1fr;
 
-  font-size: 14px;
-  font-weight: 800;
+  /* Espaçamento entre os elementos */
+  gap: 15px;
 
-  cursor: pointer;
+  /* Alinha os elementos pela parte inferior */
+  align-items: end;
 
-  &:hover {
-    opacity: 0.9;
+  /* Tablets */
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+
+    /* Botão ocupa a linha seguinte */
+    ${"" /* O próprio botão será ajustado abaixo */}
+  }
+
+  /* Celulares */
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
   }
 `;
 
-// CONTAINER DA TABELA
 
-export const TabelaContainer = styled.div`
-  width: 100%;
-  overflow-x: auto;
-`;
+// CAIXA DOS RADIO BUTTONS
 
-// TABELA
+export const GrupoRadio = styled.fieldset`
+  margin: 0;
 
-export const Tabela = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
+  min-width: 0;
 
-  th,
-  td {
-    padding: 15px 10px;
-    border-bottom: 1px solid var(--line);
+  /* Reduzimos o espaçamento interno */
+  padding: 10px 30px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 10px;
+
+  background: var(--surface);
+
+  legend {
+    padding: 0 6px;
+
     font-size: 13px;
-  }
 
-  th {
-    color: var(--muted);
-  }
+    font-weight: 700;
 
-  td {
     color: var(--text);
   }
-`;
 
-// ETIQUETAS DE SITUAÇÃO
+  label {
+    display: flex;
 
-export const Status = styled.span`
-  display: inline-block;
-  padding: 7px 10px;
+    align-items: center;
 
-  border-radius: 20px;
+    gap: 7px;
 
-  font-size: 11px;
-  font-weight: 700;
+    font-size: 13px;
 
-  white-space: nowrap;
-
-  background: ${({ $status }) =>
-    `var(--dash-status-${$status}-bg)`};
-
-  color: ${({ $status }) =>
-    `var(--dash-status-${$status}-text)`};
-`;
-
-// BOTÃO EDITAR
-
-export const BotaoAcao = styled.button`
-  padding: 8px 12px;
-
-  border: none;
-  border-radius: 9px;
-
-  background: var(--dash-action-bg);
-  color: var(--dash-action-text);
-
-  font-size: 12px;
-  font-weight: 700;
-
-  cursor: pointer;
-`;
-
-// PAGINAÇÃO
-
-export const Paginacao = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 10px;
-  margin-top: 25px;
-
-  span {
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  button {
-    padding: 9px 13px;
-
-    border: 1px solid var(--line);
-    border-radius: 10px;
-
-    background: var(--surface);
     color: var(--text);
-
-    font-size: 12px;
 
     cursor: pointer;
   }
+
+  input {
+    margin: 0;
+
+    accent-color: var(--dash-focus);
+  }
+`;
+
+
+// CATEGORIAS - DUAS COLUNAS
+
+export const OpcoesCategoria = styled.div`
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  /* Menos espaço entre as opções */
+  gap: 10px;
+`;
+
+
+// SITUAÇÃO - UMA COLUNA
+
+export const OpcoesSituacao = styled.div`
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+`;
+
+
+// BOTÃO DE CADASTRO
+
+export const BotaoCadastro = styled.button`
+  /* Largura da coluna */
+  width: 100%;
+
+  /* Altura confortável */
+  min-height: 44px;
+
+  align-items: center;
+  align-content: center;
+  align-self: center;
+
+  padding: 12px 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: var(--gradient-logo);
+
+  color: var(--surface);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+
+  &:hover {
+  transform: scale(1.08);
+  }
+
+  &:active {
+    transform: scale(0.50);
+  }
+
 `;

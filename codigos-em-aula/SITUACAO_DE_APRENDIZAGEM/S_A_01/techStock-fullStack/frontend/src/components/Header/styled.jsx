@@ -2,11 +2,13 @@ import styled from "styled-components";
 
 export const Cabecalho = styled.header`
   width: 100%;
+  
 `;
 
 export const Faixa = styled.div`
   border-bottom: 1px solid var(--line);
   background: var(--surface);
+  border-radius: 20px;
 `;
 
 export const Barra = styled.div`
@@ -52,8 +54,18 @@ export const BotaoNovo = styled.a`
   box-shadow: var(--shadow);
   font-weight: 800;
   white-space: nowrap;
+  cursor: pointer;
+  
 
-  &:hover { transform: translateY(-px); }
+  transition: transform 0.2s ease;
+
+  &:hover {
+  transform: scale(1.20);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
 `;
 
 export const LinkMenu = styled.a`

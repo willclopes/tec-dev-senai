@@ -17,7 +17,7 @@ export const LogoImg = styled.div`
   background: var(--gradient-logo);
   color: var(--surface);
   font-size: 19px;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -2px;
   box-shadow: var(--shadow);
 

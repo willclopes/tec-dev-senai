@@ -12,12 +12,12 @@ return (
       
 
         <Navegacao>
-            <LinkMenu href="/">Dashboard</LinkMenu>
-            <LinkMenu href="/relatorio">Últimos Cadastros</LinkMenu>
-            <LinkMenu href="/relatorio">Relatório</LinkMenu>
+            <LinkMenu href="/"> 📊Dashboard</LinkMenu>
+            <LinkMenu href="/relatorio">📑 Relatório</LinkMenu>
+            <LinkMenu href="/consultas">🔍︎ Consultas</LinkMenu>
           </Navegacao>
     
-    <BotaoNovo>+ Cadastrar NOVO item</BotaoNovo>
+    <BotaoNovo>+ Cadastrar Novo item</BotaoNovo>
         </Barra>
       </Faixa>
     </Cabecalho>

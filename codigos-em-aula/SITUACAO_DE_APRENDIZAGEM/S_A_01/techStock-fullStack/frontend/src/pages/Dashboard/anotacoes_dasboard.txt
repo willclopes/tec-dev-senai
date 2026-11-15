@@ -7,6 +7,9 @@ export default function Dashboard() {
   return (
     <ContainerPrincipal>
 
+
+    
+
      <Indicadores>
 
         <Card $tipo="total">
