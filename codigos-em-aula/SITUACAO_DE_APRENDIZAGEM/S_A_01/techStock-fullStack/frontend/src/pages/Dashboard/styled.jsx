@@ -296,7 +296,7 @@ export const BotaoCadastro = styled.button`
   }
 
   &:active {
-    transform: scale(0.50);
+    transform: scale(0.80);
   }
 
 `;

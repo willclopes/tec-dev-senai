@@ -4,6 +4,7 @@ export const equipamentosIniciais = [
     nome: "Notebook Dell 2",
     categoria: "Notebook",
     numero_serie: "TS-001",
+    data_aquisicao: "2026-01-02",
     status: "disponivel",
   },
   {
@@ -11,6 +12,7 @@ export const equipamentosIniciais = [
     nome: "Monitor LG",
     categoria: "Monitor",
     numero_serie: "TS-002",
+    data_aquisicao: "2026-01-06",
     status: "emprestado",
   },
   {
@@ -18,6 +20,7 @@ export const equipamentosIniciais = [
     nome: "Mouse Logitech",
     categoria: "Mouse",
     numero_serie: "TS-003",
+    data_aquisicao: "2026-01-03",
     status: "manutencao",
   },
   {
@@ -25,6 +28,7 @@ export const equipamentosIniciais = [
     nome: "Teclado Redragon",
     categoria: "Teclado",
     numero_serie: "TS-004",
+    data_aquisicao: "2026-01-05",
     status: "disponivel",
   },
 ];

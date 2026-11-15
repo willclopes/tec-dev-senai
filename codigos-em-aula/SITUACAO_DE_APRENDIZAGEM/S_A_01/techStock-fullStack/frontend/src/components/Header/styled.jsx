@@ -57,14 +57,14 @@ export const BotaoNovo = styled.a`
   cursor: pointer;
   
 
-  transition: transform 0.2s ease;
+ transition: transform 0.2s ease;
 
   &:hover {
-  transform: scale(1.20);
+  transform: scale(1.08);
   }
 
   &:active {
-    transform: scale(0.97);
+    transform: scale(0.80);
   }
 `;
 

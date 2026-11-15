@@ -46,6 +46,8 @@ export default function Catalogo({titulo, descricao, equipamentos = [], mostrarA
                <th>Equipamento</th>
               <th>Categoria</th>
               <th>Número de série</th>
+              <th>Data Aquis.</th>
+
               <th>Situação</th>
               
               {mostrarAcoes && (
@@ -70,18 +72,19 @@ export default function Catalogo({titulo, descricao, equipamentos = [], mostrarA
 
                 <td>{equipamento.numero_serie}</td>
 
-                <td>
+                <td>{equipamento.data_aquisicao}</td>
 
-                  <Status $status={equipamento.status}>
+                <td>               
+                  <Status $status={equipamento.status}>󠁯⏺&nbsp;
 
                     {equipamento.status === "disponivel"
                       ? "Disponível"
                       : equipamento.status === "emprestado"
                       ? "Emprestado"
-                      : "Em manutenção"}
+                      : "Manutenção"}
 
                   </Status>
-
+                    
                 </td>
 
  {/* BOTÕES DE EDITAR E EXCLUIR */}

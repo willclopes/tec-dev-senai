@@ -70,6 +70,8 @@ export const Tabela = styled.table`
 
   th {
     color: var(--muted);
+    background-color: #f5f0fc;
+
     
     
   }
@@ -178,6 +180,10 @@ export const Acoes = styled.div`
   align-items: center;
 
   gap: 8px;
+
+  
+
+
 `;
 
 
@@ -208,9 +214,17 @@ export const BotaoAcao = styled.button`
       ? "var(--dash-border-total)"
       : "var(--dash-border-emprestados)"};
 
-  /* Efeito ao passar o mouse */
+  
+  transition: transform 0.2s ease;
+
   &:hover {
-    background: var(--dash-action-bg);
+  transform: scale(1.08);
+  }
+
+  &:active {
+    transform: scale(0.80);
+
+
   }
 `;
 
