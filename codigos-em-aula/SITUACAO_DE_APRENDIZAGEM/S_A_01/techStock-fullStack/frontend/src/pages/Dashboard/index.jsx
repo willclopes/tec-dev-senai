@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react"
+import axios from "axios"
+import Swal from "sweetalert2"
 
 import {
   ContainerPrincipal,
@@ -20,10 +22,106 @@ import Cards from "../../components/Cards/index.jsx";
 import Banner from "../../components/Banner/index.jsx";
 import Catalogo from "../../components/Catalogo/index.jsx";
 
-import { equipamentosIniciais } from "../../../src/data/equipamentos.js";
-
 export default function Dashboard() {
-  const [equipamentos, setEquipamentos] = useState(equipamentosIniciais);
+  const [equipamentos, setEquipamentos] = useState([])
+  const [formData, setFormData] = useState({
+      id: '',
+      nome: '', 
+      categoria: '', 
+      numero_serie: '',
+      status: '', 
+      data_aquisicao: ''
+  })
+
+  const [paginaAtual, setPaginaAtual] = useState(1)
+  const [totalPaginas, setTotalPaginas] = useState(1) 
+
+  const [resumo, setResumo] = useState({})
+
+  const fetchEquipamentos = async (pagina = paginaAtual) => {
+      const response = await axios.get(`http://127.0.0.1:3003/equipamentos?page=${pagina}&limit=10`)
+      setEquipamentos(response.data.data)
+      setTotalPaginas(response.data.meta.totalPaginas)
+      setResumo(response.data.resumo)
+  }
+
+  useEffect(() => {
+      fetchEquipamentos(paginaAtual);
+  }, [paginaAtual])
+
+  const handleInputChange = (e) => {
+      const {name, value} = e.target
+      setFormData((prev) => ({ ...prev, [name]: value}))
+  } 
+
+  const handleSubmit = async (e) => {
+      e.preventDefault()
+
+      if (formData.id){
+          await axios.put(`http://127.0.0.1:3003/equipamentos/${formData.id}`, formData)
+      } else {
+          await axios.post('http://127.0.0.1:3003/equipamentos', formData)
+      }
+
+      await fetchEquipamentos()
+      setFormData({
+          id: '',
+          nome: '',
+          categoria: '',
+          numero_serie: '',
+          status: '',
+          data_aquisicao: ''
+      })
+
+      Swal.fire({
+          title: formData.id ? "Atualizado com sucesso!" : "Cadastrado com sucesso!",
+          text: `O equipamento "${formData.nome}" foi salvo no sistema.`,
+          icon: "success",
+          iconColor: "var(--green)", 
+          background: "var(--gradient-success)", 
+          color: "var(--text)", 
+          backdrop: "rgba(52, 35, 63, 0.45)", 
+          timer: 900,
+          showConfirmButton: false
+      })
+  }
+
+  const handleEdit = (equipamento) => {
+      setFormData(equipamento)
+  }
+     
+  const handleDelete = async (id) => {
+      const resultado = await Swal.fire({
+          title: "Tem certeza?",
+          text: "Essa ação não poderá ser desfeita!",
+          icon: "warning",
+          iconColor: "var(--coral)", 
+          background: "var(--gradient-warning)", 
+          color: "var(--text)", 
+          backdrop: "rgba(12, 9, 13, 0.45)", 
+          showCancelButton: true,
+          confirmButtonColor: "var(--coral)", 
+          cancelButtonColor: "var(--muted)",  
+          confirmButtonText: "Sim, excluir!",
+          cancelButtonText: "Cancelar"
+      })
+
+      if (resultado.isConfirmed) {
+          await axios.delete(`http://127.0.0.1:3003/equipamentos/${id}`)
+          await fetchEquipamentos()
+
+          Swal.fire({
+              title: "Excluído!",
+              text: "O equipamento foi removido com sucesso.",
+              icon: "success",
+              iconColor: "var(--green)",
+              background: "var(--gradient-success)",
+              color: "var(--text)",
+              timer: 900,
+              showConfirmButton: false
+          })
+      }
+  }
 
   return (
     <ContainerPrincipal>
@@ -37,31 +135,28 @@ export default function Dashboard() {
         <Cards
           tipo="total"
           legenda="Total de ativos"
-          numerocard={18}
+          numerocard={resumo.total}
           legendacard="Equipamentos cadastrados"
           icone="⌨"
         />
-
         <Cards
           tipo="disponiveis"
           legenda="Disponíveis"
-          numerocard={10}
+          numerocard={resumo.disponiveis}
           legendacard="Prontos para utilização"
           icone="✔"
         />
-
         <Cards
           tipo="emprestados"
           legenda="Emprestados"
-          numerocard={5}
+          numerocard={resumo.emprestados}
           legendacard="Em utilização"
           icone="⇄"
         />
-
         <Cards
           tipo="manutencao"
           legenda="Em manutenção"
-          numerocard={3}
+          numerocard={resumo.manutencao}
           legendacard="Aguardando liberação"
           icone="🛠"
         />
@@ -73,7 +168,8 @@ export default function Dashboard() {
           Preencha os dados do novo equipamento.
         </DescricaoPainel>
 
-        <Formulario>
+        {/* Adicionado o onSubmit no Formulario */}
+        <Formulario onSubmit={handleSubmit}>
           {/* PRIMEIRA LINHA - DADOS */}
           <LinhaCampos>
             <CampoFormulario>
@@ -83,6 +179,8 @@ export default function Dashboard() {
                 name="nome"
                 type="text"
                 placeholder="Ex.: Notebook Dell"
+                value={formData.nome}
+                onChange={handleInputChange}
               />
             </CampoFormulario>
 
@@ -93,6 +191,8 @@ export default function Dashboard() {
                 name="numero_serie"
                 type="text"
                 placeholder="Ex.: TS-NB-001"
+                value={formData.numero_serie}
+                onChange={handleInputChange}
               />
             </CampoFormulario>
 
@@ -102,6 +202,8 @@ export default function Dashboard() {
                 id="data"
                 name="data_aquisicao"
                 type="date"
+                value={formData.data_aquisicao}
+                onChange={handleInputChange}
               />
             </CampoFormulario>
           </LinhaCampos>
@@ -114,22 +216,46 @@ export default function Dashboard() {
 
               <OpcoesCategoria>
                 <label>
-                  <input type="radio" name="categoria" value="Monitor" />
+                  <input 
+                  type="radio" 
+                  name="categoria" 
+                  value="Monitor" 
+                  checked={formData.categoria === "Monitor"} 
+                  onChange={handleInputChange} 
+                  />
                   Monitor
                 </label>
 
                 <label>
-                  <input type="radio" name="categoria" value="Headset" />
+                  <input 
+                  type="radio" 
+                  name="categoria"
+                  value="Headset" 
+                  checked={formData.categoria === "Headset"} 
+                  onChange={handleInputChange}
+                  />
                   Headset
                 </label>
 
                 <label>
-                  <input type="radio" name="categoria" value="Mouse" />
+                  <input 
+                  type="radio" 
+                  name="categoria" 
+                  value="Mouse" 
+                  checked={formData.categoria === "Mouse"} 
+                  onChange={handleInputChange}
+                  />
                   Mouse
                 </label>
 
                 <label>
-                  <input type="radio" name="categoria" value="Teclado" />
+                  <input 
+                  type="radio" 
+                  name="categoria" 
+                  value="Teclado" 
+                  checked={formData.categoria === "Teclado"} 
+                  onChange={handleInputChange}
+                  />
                   Teclado
                 </label>
 
@@ -138,13 +264,20 @@ export default function Dashboard() {
                     type="radio"
                     name="categoria"
                     value="Notebook"
-                    defaultChecked
+                    checked={formData.categoria === "Notebook"} 
+                    onChange={handleInputChange}
                   />
                   Notebook
                 </label>
 
                 <label>
-                  <input type="radio" name="categoria" value="Outro" />
+                  <input 
+                  type="radio" 
+                  name="categoria" 
+                  value="Acessório" 
+                  checked={formData.categoria === "Acessório"} 
+                  onChange={handleInputChange}
+                  />
                   Outro
                 </label>
               </OpcoesCategoria>
@@ -159,8 +292,9 @@ export default function Dashboard() {
                   <input
                     type="radio"
                     name="status"
-                    value="disponivel"
-                    defaultChecked
+                    value="Disponível"
+                    checked={formData.status === "Disponível"} 
+                    onChange={handleInputChange}
                   />
                   Disponível
                 </label>
@@ -169,7 +303,9 @@ export default function Dashboard() {
                   <input
                     type="radio"
                     name="status"
-                    value="emprestado"
+                    value="Emprestado"
+                    checked={formData.status === "Emprestado"} 
+                    onChange={handleInputChange}
                   />
                   Emprestado
                 </label>
@@ -178,16 +314,18 @@ export default function Dashboard() {
                   <input
                     type="radio"
                     name="status"
-                    value="manutencao"
+                    value="Manutenção"
+                    checked={formData.status === "Manutenção"} 
+                    onChange={handleInputChange}
                   />
                   Manutenção
                 </label>
               </OpcoesSituacao>
             </GrupoRadio>
 
-            {/* BOTÃO AO LADO DOS RADIO BUTTONS */}
-            <BotaoCadastro type="button">
-              + Cadastrar equipamento
+            {/* BOTÃO AO LADO DOS RADIO BUTTONS: type atualizado para submit e texto dinâmico */}
+            <BotaoCadastro type="submit">
+              {formData.id ? "✎ᝰ Atualizar equipamento" : "+ Cadastrar equipamento"}
             </BotaoCadastro>
           </LinhaOpcoes>
         </Formulario>
@@ -197,11 +335,18 @@ export default function Dashboard() {
       {/* ÁREA DE CADASTRO - FIM                 */}
       {/* ====================================== */}
 
+      {/* Adicionado o repasse das funções handleEdit e handleDelete para o componente filho */}
       <Catalogo
         titulo="Catálogo de ativos"
         descricao="Equipamentos cadastrados na empresa."
         equipamentos={equipamentos}
         mostrarAcoes={true}
+        onEdit={handleEdit}
+        onDelete={handleDelete}
+        paginaAtual={paginaAtual}
+        totalPaginas={totalPaginas}
+        onPaginaAnterior={() => setPaginaAtual(paginaAtual - 1)}
+        onPaginaProxima={() => setPaginaAtual(paginaAtual + 1)}
       />
     </ContainerPrincipal>
   );

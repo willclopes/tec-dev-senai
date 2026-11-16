@@ -34,20 +34,21 @@
 --dash-border-manutencao: #b65bcb;
 
 
-/* Gradiente para mensagens de sucesso */
+
+/* Sucesso - Verde menta suave */
 --gradient-success: linear-gradient(
   120deg,
-  #16a98c 0%,
-  #24c5ab 55%,
-  #65d5b4 100%
+  #e1faef 0%,
+  #c1f1dd 55%,
+  #a5e6ce 100%
 );
 
-/* Gradiente para mensagens de atenção */
+/* Atenção - Coral pêssego suave */
 --gradient-warning: linear-gradient(
   120deg,
-  #ee5e76 0%,
-  #ff856e 55%,
-  #ffb16c 100%
+  #fff0e9 0%,
+  #ffdbd0 55%,
+  #ffc9bb 100%
 );
 
 
