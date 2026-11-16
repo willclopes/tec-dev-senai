@@ -14,16 +14,26 @@ export function App() {
   return (
     <>
 
-     <Header />
+     
    
-    {/* <PrimeiraVersao /> */}
+     {/* <PrimeiraVersao />  */}
     
-     <Dashboard /> 
+
+     
+      <Header />
+      <Dashboard /> 
+      <Footer /> 
+    
+    
+    {/*
      <Relatorio />
-    <Consultas />
+      <Consultas />
 
       <NotFound /> 
       <Footer /> 
+    */}
+    
+    
     </>
   )
 }

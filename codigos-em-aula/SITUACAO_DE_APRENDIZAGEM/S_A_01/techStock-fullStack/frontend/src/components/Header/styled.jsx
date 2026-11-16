@@ -8,7 +8,7 @@ export const Cabecalho = styled.header`
 export const Faixa = styled.div`
   border-bottom: 1px solid var(--line);
   background: var(--surface);
-  border-radius: 20px;
+  //border-radius: 20px;
 `;
 
 export const Barra = styled.div`
@@ -34,12 +34,27 @@ export const Navegacao = styled.nav`
     border-radius: 12px;
     color: var(--muted);
     font-weight: 700;
+
+    transition: transform 0.2s ease;
+
+  &:hover {
+  transform: scale(1.08);
+  }
+
+  &:active {
+    transform: scale(0.80);
+  }
+
+
   }
 
   a.active {
     color: var(--green-dark);
     background: var(--green-soft);
   }
+
+
+  
 
 `;
 
