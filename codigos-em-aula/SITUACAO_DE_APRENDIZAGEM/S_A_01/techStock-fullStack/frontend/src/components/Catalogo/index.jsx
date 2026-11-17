@@ -88,7 +88,7 @@ titulo,
                         $tipo="editar"
                         onClick={() => onEdit?.(equipamento)}
                       >
-                        ✎ᝰEditar
+                        ✎ Editar
                       </BotaoAcao>
 
                       <BotaoAcao
@@ -96,7 +96,7 @@ titulo,
                         $tipo="excluir"
                         onClick={() => onDelete?.(equipamento.id)}
                       >
-                        ✘Excluir
+                        ✘ Excluir
                       </BotaoAcao>
                     </Acoes>
                   </td>

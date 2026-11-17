@@ -9,8 +9,8 @@ export const Painel = styled.section`
   border-radius: 22px;
   box-shadow: var(--shadow);
 
-  border-top: 10px solid var(--dash-border-manutencao);
-
+  border-top: 10px solid var(--dash-border-emprestados);
+  border-bottom: 10px solid var(--dash-border-emprestados);
 
   
 `;
@@ -138,6 +138,7 @@ export const Acoes = styled.div`
 
   justify-content: center;
   align-items: center;
+  
 
   gap: 8px;
  
@@ -150,6 +151,7 @@ export const BotaoAcao = styled.button`
   background: var(--surface);
   font-size: 12px;
   font-weight: 700;
+  
 
   cursor: pointer;
 

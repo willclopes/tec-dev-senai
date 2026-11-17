@@ -6,7 +6,7 @@ export const Card = styled.div`
       
   border: 2px solid
     ${({ $tipo }) => `var(--dash-border-${$tipo})`};
-  border: 2px solid white;
+  border: 1px solid white;
 
 
   border-top: 10px solid
@@ -53,8 +53,8 @@ export const Icone = styled.div`
 `;
 
 export const Numero = styled.h2`
-  margin: 10px 0;
-  font-size: 40px;
+  margin: 5px;
+  font-size: 45px;
   font-weight: 800;
   color: var(--text);
 `;
