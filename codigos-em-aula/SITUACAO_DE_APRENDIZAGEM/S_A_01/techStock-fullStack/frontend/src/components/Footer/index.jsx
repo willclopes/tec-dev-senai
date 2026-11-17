@@ -6,7 +6,7 @@ export default function Footer() {
     <Rodape>
       <Conteudo>
         <Logo />
-        <Texto>Feito para a TechSolutions · 2026 · Tec Dev Sistemas Web · SENAI  🌿</Texto>
+        <Texto>Feito para a TechSolutions · 2026 · Tec Dev Sistemas Web · SENAI  🎓</Texto>
       </Conteudo>
     </Rodape>
   );

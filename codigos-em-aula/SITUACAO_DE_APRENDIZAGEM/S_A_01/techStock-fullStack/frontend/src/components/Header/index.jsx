@@ -13,9 +13,9 @@ return (
 
         <Navegacao>
             <LinkMenu to="/primeiraversao"> [Primeira Versão]</LinkMenu>
-            <LinkMenu to="/dashboard"> 📊Dashboard</LinkMenu>
-            <LinkMenu to="/relatorio">📑 Relatório</LinkMenu>
-            <LinkMenu to="/consultas">🔍︎ Consultas</LinkMenu>
+            <LinkMenu to="/dashboard">MENU 1</LinkMenu>
+            <LinkMenu to="/relatorio">MENU 2</LinkMenu>
+            <LinkMenu to="/consultas">MENU 3</LinkMenu>
           </Navegacao>
     
     <BotaoNovo>+ Cadastrar Novo item</BotaoNovo>

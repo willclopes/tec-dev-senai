@@ -14,7 +14,7 @@ export const Conteudo = styled.div`
   margin: 0 auto;
   padding: 25px 30px;
 
-  @media (max-width: 600px) { flex-direction: column; text-align: center; }
+  
 `;
 
 export const Texto = styled.p`

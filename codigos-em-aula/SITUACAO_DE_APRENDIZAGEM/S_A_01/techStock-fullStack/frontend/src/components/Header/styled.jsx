@@ -53,9 +53,6 @@ export const Navegacao = styled.nav`
     background: var(--green-soft);
   }
 
-
-  
-
 `;
 
 export const BotaoNovo = styled.a`
@@ -71,7 +68,6 @@ export const BotaoNovo = styled.a`
   white-space: nowrap;
   cursor: pointer;
   
-
  transition: transform 0.2s ease;
 
   &:hover {

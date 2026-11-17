@@ -4,6 +4,8 @@ import { ListSection, MainContainer, RegisterSection } from "./styled"
 
 import Swal from "sweetalert2"
 
+import Cards from "../../components/Cards/index.jsx";
+
 
 export default function PrimeiraVersao() {
     const [equipamentos, setEquipamentos] = useState([])
@@ -30,7 +32,7 @@ export default function PrimeiraVersao() {
         
         
         //Pede os dados ao servidor e aguarda a resposta
-        const response = await axios.get(`http://127.0.0.1:3003/equipamentos?page=${pagina}&limit=10`)
+        const response = await axios.get(`http://127.0.0.1:3003/equipamentos?page=${pagina}&limit=100`)
             //Salva apenas a lista de equipamentos (response.data) no estado do React
         setEquipamentos(response.data.data)
         //console.log(response)
@@ -178,9 +180,51 @@ const handleDelete = async (id) => {
 
 
     return(
+
+      
+
        <MainContainer>
             <h2>Sistema de Cadastro de Equipamentos</h2>
 
+
+        <div style={{display:"flex", gap:"20px",}}>
+        <Cards
+          //tipo="total"
+          legenda="Total de ativos"
+          numerocard={10}
+          legendacard="Equipamentos cadastrados"
+          icone=""
+        />
+
+        <Cards
+          //tipo="total"
+          legenda="Total de ativos"
+          numerocard={10}
+          legendacard="Equipamentos cadastrados"
+          icone=""
+        />
+
+        <Cards
+          //tipo="total"
+          legenda="Total de ativos"
+          numerocard={10}
+          legendacard="Equipamentos cadastrados"
+          icone=""
+        />
+
+        <Cards
+          //tipo="total"
+          legenda="Total de ativos"
+          numerocard={10}
+          legendacard="Equipamentos cadastrados"
+          icone=""
+        />
+
+    </div>
+
+
+
+        {/*
             <h3> ---- Cards ---- </h3>
             
             <h3>total de equipamentos: {resumo.total} </h3>
@@ -211,6 +255,8 @@ const handleDelete = async (id) => {
             <h3>Teclado Cadastrados: {resumo.teclados}</h3>
             <h3>Headset Cadastrados: {resumo.headsets}</h3>
 
+
+            */}
            
         <RegisterSection>
 
@@ -348,6 +394,8 @@ const handleDelete = async (id) => {
                </table>
            </ListSection> 
 
+
+{/*
 <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "20px" }}>
                             <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
@@ -371,7 +419,7 @@ const handleDelete = async (id) => {
                 </div>
             </div>
 
-
+*/}
 
 
        </MainContainer>

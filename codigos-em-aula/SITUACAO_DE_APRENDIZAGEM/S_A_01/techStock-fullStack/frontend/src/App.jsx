@@ -14,25 +14,25 @@ export function App() {
   return (
     <>
 
-     
+      <Header />
    
-     {/* <PrimeiraVersao />  */}
+      <PrimeiraVersao />  
     
-
+    {/*
      
       <Header />
       <Dashboard /> 
       <Footer /> 
-    
+    */}
     
     {/*
      <Relatorio />
       <Consultas />
 
       <NotFound /> 
-      <Footer /> 
+      
     */}
-    
+    <Footer /> 
     
     </>
   )

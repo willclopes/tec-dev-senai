@@ -3,25 +3,22 @@ import styled from "styled-components";
 export const Card = styled.div`
   padding: 25px;
   border-radius: 20px;
- 
-  /*
+      
   border: 2px solid
     ${({ $tipo }) => `var(--dash-border-${$tipo})`};
-*/
-
   border: 2px solid white;
-
+  
   background: ${({ $tipo }) =>
     `var(--dash-card-${$tipo})`};
-
+    
   box-shadow: var(--shadow);
-  
+      
   transition: transform 0.2s ease;
 
-  &:hover {
-    transform: translateY(-10px);
-  }
-`;
+    &:hover {
+      transform: translateY(-10px);
+    }
+  `;
 
 export const Topo = styled.div`
   display: flex;
@@ -39,15 +36,15 @@ export const Legenda = styled.p`
 `;
 
 export const Icone = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
-    background: transparent;
-    border-radius: 8px;
-    font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 35px;
 `;
 
 export const Numero = styled.h2`

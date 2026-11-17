@@ -7,7 +7,6 @@ export const MainContainer = styled.main`
 
 `;
 
-
 export const Quadro = styled.section`
   display: grid;
   grid-template-columns: 1fr 280px;

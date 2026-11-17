@@ -1,60 +1,40 @@
 
 import styled from "styled-components";
 
-// Painel principal do catálogo
 export const Painel = styled.section`
   min-width: 0;
-
   padding: 25px;
-
   background: var(--surface);
-
   border: 1px solid var(--line);
-
   border-radius: 22px;
-
   box-shadow: var(--shadow);
 
 
   
 `;
 
-// Título
 export const Titulo = styled.h2`
   margin: 0 0 8px;
-
   font-size: 21px;
-
   font-weight: 800;
-
   color: var(--text);
 `;
 
-// Descrição
 export const Descricao = styled.p`
   margin: 0 0 25px;
-
   font-size: 14px;
-
   color: var(--muted);
 `;
 
-// Evita que a tabela ultrapasse o painel
 export const TabelaContainer = styled.div`
   width: 100%;
-
   overflow-x: auto;
   
 `;
 
-// Tabela de equipamentos
 export const Tabela = styled.table`
   width: 100%;
-
   border-collapse: collapse;
-
-  
-
   text-align: left;
 
   th,
@@ -71,9 +51,7 @@ export const Tabela = styled.table`
   th {
     color: var(--muted);
     background-color: #f5f0fc;
-
-    
-    
+      
   }
 
   td {
@@ -84,18 +62,12 @@ export const Tabela = styled.table`
 
 `;
 
-// Etiqueta de situação
 export const Status = styled.span`
   display: inline-block;
-
   padding: 7px 10px;
-
   border-radius: 8px;
-
   font-size: 11px;
-
   font-weight: 700;
-
   white-space: nowrap;
 
   background: ${({ $status }) =>
@@ -108,16 +80,11 @@ export const Status = styled.span`
   */
 `;
 
-// Paginação
 export const Paginacao = styled.div`
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   gap: 10px;
-
   margin-top: 25px;
 
   span {
@@ -128,9 +95,7 @@ export const Paginacao = styled.div`
 
   button {
     padding: 9px 13px;
-
     border: 1px solid var(--line);
-
     border-radius: 10px;
 
     background: var(--surface);
@@ -155,23 +120,16 @@ export const BotaoPagina = styled.button`
 
   cursor: pointer;
 
-  /* Efeito simples */
   &:hover {
     opacity: 0.8;
   }
 
-  /* Botão desativado */
   &:disabled {
     opacity: 0.4;
     cursor: not-allowed;
   }
 `;
 
-
-
-// ==========================================
-// ÁREA DOS BOTÕES DE AÇÃO
-// ==========================================
 
 export const Acoes = styled.div`
   display: flex;
@@ -180,30 +138,19 @@ export const Acoes = styled.div`
   align-items: center;
 
   gap: 8px;
-
-  
-
-
+ 
 `;
 
 
-// ==========================================
-// BOTÕES EDITAR E EXCLUIR
-// ==========================================
-
 export const BotaoAcao = styled.button`
   padding: 7px 11px;
-
   border-radius: 8px;
-
   background: var(--surface);
-
   font-size: 12px;
   font-weight: 700;
 
   cursor: pointer;
 
-  /* Cor da borda e do texto conforme o botão */
   border: 1px solid ${({ $tipo }) =>
     $tipo === "editar"
       ? "var(--dash-border-total)"
