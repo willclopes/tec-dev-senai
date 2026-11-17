@@ -18,11 +18,11 @@ import {
   BotaoCadastro,
 } from "./styled.jsx";
 
-import Cards from "../../components/Cards/index.jsx";
-import Banner from "../../components/Banner/index.jsx";
-import Catalogo from "../../components/Catalogo/index.jsx";
+import {Cards} from "../../components/Cards/index.jsx";
+import {Banner} from "../../components/Banner/index.jsx";
+import {Catalogo} from "../../components/Catalogo/index.jsx";
 
-export default function Dashboard() {
+export function Dashboard() {
   const [equipamentos, setEquipamentos] = useState([])
   const [formData, setFormData] = useState({
       id: '',
@@ -162,7 +162,7 @@ export default function Dashboard() {
         />
       </IndicadoresCards>
 
-      <Painel>
+      <Painel id="cadastro">
         <TituloPainel>Cadastrar equipamento</TituloPainel>
         <DescricaoPainel>
           Preencha os dados do novo equipamento.

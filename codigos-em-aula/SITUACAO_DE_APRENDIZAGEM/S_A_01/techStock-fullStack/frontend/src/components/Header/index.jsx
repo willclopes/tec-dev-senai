@@ -1,26 +1,38 @@
 import { Logo } from "../Logo";
-import { Barra, BotaoNovo, Cabecalho, Faixa, LinkMenu, Navegacao } from "./styled";
+import { Barra, BotaoNovo, Faixa, LinkMenu, Navegacao, ContainerFlutuante } from "./styled";
 
 
-export default function Header() {
+export function Header() {
 
 return (
-    <Cabecalho>
+    
+    
+    <ContainerFlutuante>
+
+
+   {/*<ContainerAntigo> */}
       <Faixa>
         <Barra>
          <Logo />
       
 
-        <Navegacao>
-            <LinkMenu to="/primeiraversao"> [Primeira Versão]</LinkMenu>
-            <LinkMenu to="/dashboard">MENU 1</LinkMenu>
-            <LinkMenu to="/relatorio">MENU 2</LinkMenu>
-            <LinkMenu to="/consultas">MENU 3</LinkMenu>
-          </Navegacao>
+       <Navegacao>
+          <LinkMenu to="/primeiraversao"> [Primeira Versão]</LinkMenu>
+          <LinkMenu to="/dashboard"> 📊Dashboard</LinkMenu>
+          <LinkMenu to="/relatorio">📑 Relatório</LinkMenu>
+          <LinkMenu to="/consultas">🔍︎ Consultas</LinkMenu>
+        </Navegacao>
     
-    <BotaoNovo>+ Cadastrar Novo item</BotaoNovo>
+    <BotaoNovo to="/dashboard#cadastro">+ Cadastrar Novo item</BotaoNovo>
         </Barra>
       </Faixa>
-    </Cabecalho>
+    
+      {/*<ContainerAntigo> */}
+
+    </ContainerFlutuante>
+    
+    
+   
+  
   );
 }

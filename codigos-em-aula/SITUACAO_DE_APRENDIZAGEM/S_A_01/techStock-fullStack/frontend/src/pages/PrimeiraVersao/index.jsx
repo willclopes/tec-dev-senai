@@ -4,10 +4,10 @@ import { ListSection, MainContainer, RegisterSection } from "./styled"
 
 import Swal from "sweetalert2"
 
-import Cards from "../../components/Cards/index.jsx";
+import {Cards} from "../../components/Cards/index.jsx";
 
 
-export default function PrimeiraVersao() {
+export function PrimeiraVersao() {
     const [equipamentos, setEquipamentos] = useState([])
     const [formData, setFormData] = useState({
         id: '',

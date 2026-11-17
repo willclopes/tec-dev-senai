@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const MainContainer = styled.main`
   max-width: 1300px;
@@ -66,7 +67,7 @@ export const Descricao = styled.p`
   color: var(--muted);
 `;
 
-export const BotaoVoltar = styled.button`
+export const BotaoVoltar = styled(Link)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -79,6 +80,8 @@ export const BotaoVoltar = styled.button`
   box-shadow: var(--shadow);
   transition: transform 0.2s;
   border: none;
+  text-decoration: none;
+  
 
   &:hover {
     transform: translateY(-2px);

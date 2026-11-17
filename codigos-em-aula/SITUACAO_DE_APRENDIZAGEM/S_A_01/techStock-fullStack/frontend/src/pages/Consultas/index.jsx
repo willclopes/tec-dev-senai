@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Banner from "../../components/Banner";
-import Catalogo from "../../components/Catalogo";
+import {Banner} from "../../components/Banner";
+import {Catalogo} from "../../components/Catalogo";
 
 import { equipamentosIniciais } from "../../../src/data/equipamentos.js"
 
@@ -29,7 +29,7 @@ const filtrosIniciais = {
 };
 
 
-export default function Consultas() {
+export function Consultas() {
 
     const [filtros, setFiltros] = useState(filtrosIniciais);
 

@@ -1,12 +1,11 @@
-import Banner from "../../components/Banner/index.jsx";
+import {Banner} from "../../components/Banner/index.jsx";
 import {
   ContainerPrincipal, Apresentacao, Etiqueta, TituloPagina, DescricaoPagina, Grade,
   Painel, TituloPainel, DescricaoPainel, Categoria, Barra, LinhaSituacao, Status,
   Destaque, NumeroDestaque, TabelaContainer, Tabela } from "./styled.jsx";
 
 
-// Página de Relatório
-export default function Relatorio(tipo) {
+export function Relatorio(tipo) {
   return (
     <ContainerPrincipal>
 

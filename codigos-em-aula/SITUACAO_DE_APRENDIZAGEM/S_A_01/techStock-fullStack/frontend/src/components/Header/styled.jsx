@@ -1,12 +1,34 @@
 import styled from "styled-components";
+import { NavLink, Link } from "react-router-dom";
 
-export const Cabecalho = styled.header`
+export const ContainerFlutuante = styled.header`
+  max-width: 1300px;
+  height: 95px;
+  margin: 24px auto 25px;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px 16px 16px 16px;
+  box-shadow: var(--shadow);
+
+   
+`;
+
+
+
+export const ContainerAntigo = styled.header`
   width: 100%;
   
 `;
 
 export const Faixa = styled.div`
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--dash-border-manutencao);
+  width: 100%;
   background: var(--surface);
   //border-radius: 20px;
 `;
@@ -55,7 +77,7 @@ export const Navegacao = styled.nav`
 
 `;
 
-export const BotaoNovo = styled.a`
+export const BotaoNovo = styled(NavLink)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -67,6 +89,7 @@ export const BotaoNovo = styled.a`
   font-weight: 800;
   white-space: nowrap;
   cursor: pointer;
+  text-decoration: none;
   
  transition: transform 0.2s ease;
 
@@ -79,7 +102,7 @@ export const BotaoNovo = styled.a`
   }
 `;
 
-export const LinkMenu = styled.a`
+export const LinkMenu = styled(NavLink)`
   color: var(--muted);
   text-decoration: none;
   font-size: 14px;

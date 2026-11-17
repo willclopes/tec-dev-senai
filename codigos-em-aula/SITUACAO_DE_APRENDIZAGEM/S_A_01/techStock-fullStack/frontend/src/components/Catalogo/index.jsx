@@ -11,9 +11,8 @@ import {
   BotaoAcao
 } from "./styled.jsx";
 
-// Componente reutilizável do catálogo.
-// Por enquanto, recebe apenas os textos.
-export default function Catalogo({
+
+export function Catalogo({
 titulo, 
   descricao, 
   equipamentos = [], 

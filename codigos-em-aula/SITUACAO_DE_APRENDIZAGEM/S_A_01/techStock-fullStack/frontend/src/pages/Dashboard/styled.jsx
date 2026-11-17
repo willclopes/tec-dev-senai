@@ -23,6 +23,7 @@ export const Painel = styled.section`
   border-radius: 20px;
   box-shadow: var(--shadow);
   margin-bottom: 25px;
+  border-top: 10px solid var(--dash-border-emprestados);
 `;
 
 export const TituloPainel = styled.h2`

@@ -1,12 +1,6 @@
 import './App.css'
-import { Card } from './components/Cards/styled'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Consultas from './pages/Consultas'
-import Dashboard from './pages/Dashboard'
-import NotFound from './pages/NotFound'
-import PrimeiraVersao from './pages/PrimeiraVersao'
-import Relatorio from './pages/Relatorio'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router.jsx'
 
 export function App() {
 
@@ -14,26 +8,34 @@ export function App() {
   return (
     <>
 
-      <Header />
+    <RouterProvider router={router}/>
+
+  
+  {/* 
+  
+  
+       <Header />
    
-      <PrimeiraVersao />  
+      <PrimeiraVersao /> 
+
+       <Footer />  
     
-    {/*
+   
      
       <Header />
       <Dashboard /> 
       <Footer /> 
-    */}
+   
     
-    {/*
-     <Relatorio />
+      <Header />
+      <Dashboard /> 
+      <Relatorio /> 
       <Consultas />
+      <NotFound />  
+      <Footer /> 
+  */}
 
-      <NotFound /> 
-      
-    */}
-    <Footer /> 
-    
+
     </>
   )
 }

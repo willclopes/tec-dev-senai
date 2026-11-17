@@ -1,0 +1,363 @@
+
+/*
+ * ==========================================
+ * TECHSTOCK — PALETA AURORA CONTRASTE+
+ * ==========================================
+ *
+ * Azul royal + violeta + coral-pêssego.
+ *
+ * Background mais contrastado.
+ * Interface clara, moderna e colorida.
+ *
+ * Todos os nomes das variáveis foram mantidos.
+ */
+
+:root {
+
+  /* ========================================
+     CORES GERAIS
+     ======================================== */
+
+  --background: #eef4ff;
+
+  --surface: #ffffff;
+
+  --text: #1b2b45;
+
+  --muted: #506580;
+
+  --line: #cad9eb;
+
+
+  /* ========================================
+     CORES PRINCIPAIS
+     ======================================== */
+
+  /* Azul principal */
+  --green: #1268df;
+
+  --green-dark: #0847a4;
+
+  --green-soft: #d8e8ff;
+
+
+  /* Coral */
+  --coral: #e76b3e;
+
+  --coral-dark: #9e4426;
+
+  --coral-soft: #ffe2d2;
+
+
+  /* Amarelo */
+  --yellow: #bc7c24;
+
+  --yellow-soft: #ffebc5;
+
+
+  /* Violeta */
+  --blue: #7954d1;
+
+  --blue-soft: #e8dfff;
+
+
+  /* ========================================
+     BACKGROUND CLARO
+     ======================================== */
+
+  --gradient-page-light:
+    radial-gradient(
+      ellipse at 2% 6%,
+      #cfe3ff 0%,
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 93% 4%,
+      #ffdcbc 0%,
+      transparent 37%
+    ),
+    linear-gradient(
+      180deg,
+      #f7fbff 0%,
+      #fff7f1 100%
+    );
+
+
+  /* ========================================
+     BACKGROUND PRINCIPAL
+     Azul + Laranja + Violeta
+
+     Mais contraste sem escurecer a página.
+     ======================================== */
+
+  --gradient-page:
+    radial-gradient(
+      ellipse at 2% 6%,
+      #9fcbff 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 93% 4%,
+      #ffc793 0%,
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 55% 68%,
+      #dcc9ff 0%,
+      transparent 48%
+    ),
+    linear-gradient(
+      180deg,
+      #edf5ff 0%,
+      #fff4ea 100%
+    );
+
+
+  /* ========================================
+     GRADIENTE DO BANNER
+     ======================================== */
+
+  --gradient-banner: linear-gradient(
+    112deg,
+    #70bfff 0%,
+    #96a8f6 34%,
+    #da9dd5 65%,
+    #ffb477 100%
+  );
+
+
+  /* ========================================
+     GRADIENTE DA LOGO
+     ======================================== */
+
+  --gradient-logo: linear-gradient(
+    125deg,
+    #0345b2 0%,
+    #1479ee 30%,
+    #7946c9 65%,
+    #ce522c 100%
+  );
+
+
+  /* ========================================
+     GRADIENTE DOS BOTÕES
+     ======================================== */
+
+  --gradient-button: linear-gradient(
+    105deg,
+    #073f9f 0%,
+    #3154d3 36%,
+    #764abf 67%,
+    #b84e2b 100%
+  );
+
+
+  /* ========================================
+     GRADIENTES GERAIS DOS INDICADORES
+     ======================================== */
+
+  /* Total - Azul e violeta */
+  --gradient-total: linear-gradient(
+    135deg,
+    #93cdff,
+    #9a8fea
+  );
+
+
+  /* Disponíveis - Verde */
+  --gradient-available: linear-gradient(
+    135deg,
+    #b8f2d9,
+    #38bd94
+  );
+
+
+  /* Emprestados - Coral */
+  --gradient-loaned: linear-gradient(
+    135deg,
+    #ffe0ba,
+    #f38b60
+  );
+
+
+  /* Manutenção - Violeta */
+  --gradient-maintenance: linear-gradient(
+    135deg,
+    #e8d7ff,
+    #aa85e9
+  );
+
+
+  /* ========================================
+     BORDAS DOS CARDS
+     ======================================== */
+
+  /* Total - Azul */
+  --dash-border-total: #377de0;
+
+
+  /* Disponíveis - Verde */
+  --dash-border-disponiveis: #168b6a;
+
+
+  /* Emprestados - Coral */
+  --dash-border-emprestados: #da723f;
+
+
+  /* Manutenção - Violeta */
+  --dash-border-manutencao: #7753cb;
+
+
+  /* ========================================
+     MENSAGENS DE SUCESSO
+     ======================================== */
+
+  --gradient-success: linear-gradient(
+    120deg,
+    #d7f9e9 0%,
+    #a5e8cc 55%,
+    #80d8b8 100%
+  );
+
+
+  /* ========================================
+     MENSAGENS DE ATENÇÃO
+     ======================================== */
+
+  --gradient-warning: linear-gradient(
+    120deg,
+    #ffebdc 0%,
+    #ffd0b0 55%,
+    #f6ac82 100%
+  );
+
+
+  /* ========================================
+     SOMBRAS
+     ======================================== */
+
+  /* Sombra normal */
+  --shadow: 0 14px 45px rgba(
+    32, 70, 137, 0.16
+  );
+
+
+  /* Sombra ao passar o mouse */
+  --shadow-hover: 0 17px 38px rgba(
+    32, 70, 137, 0.22
+  );
+
+
+  /* ========================================
+     CARDS DO DASHBOARD
+     ======================================== */
+
+  /* Total de ativos */
+  --dash-card-total: linear-gradient(
+    135deg,
+    #93cdff 0%,
+    #65aafa 50%,
+    #9a8fea 100%
+  );
+
+
+  /* Disponíveis */
+  --dash-card-disponiveis: linear-gradient(
+    135deg,
+    #b8f2d9 0%,
+    #72deb9 50%,
+    #38bd94 100%
+  );
+
+
+  /* Emprestados */
+  --dash-card-emprestados: linear-gradient(
+    135deg,
+    #ffe0ba 0%,
+    #ffb17d 50%,
+    #f38b60 100%
+  );
+
+
+  /* Em manutenção */
+  --dash-card-manutencao: linear-gradient(
+    135deg,
+    #e8d7ff 0%,
+    #c8a8f4 50%,
+    #aa85e9 100%
+  );
+
+
+  /* ========================================
+     DESTAQUE DOS CAMPOS
+     ======================================== */
+
+  --dash-focus: #155ede;
+
+
+  /* ========================================
+     STATUS DOS EQUIPAMENTOS - CATÁLOGO
+     ======================================== */
+
+  /* Disponível - Verde */
+  --dash-status-disponivel-bg: linear-gradient(
+    135deg,
+    #c9f4df 0%,
+    #9ae6c8 55%,
+    #6fd3ae 100%
+  );
+
+  --dash-status-disponivel-text: #135e48;
+
+
+  /* Emprestado - Coral */
+  --dash-status-emprestado-bg: linear-gradient(
+    135deg,
+    #ffe2cb 0%,
+    #ffc79f 55%,
+    #ffae86 100%
+  );
+
+  --dash-status-emprestado-text: #8d3c1e;
+
+
+  /* Em manutenção - Violeta */
+  --dash-status-manutencao-bg: linear-gradient(
+    135deg,
+    #e8dcff 0%,
+    #d4bdf7 55%,
+    #bda0ed 100%
+  );
+
+  --dash-status-manutencao-text: #51318c;
+
+
+  /* ========================================
+     FUNDO DAS TABELAS
+     ======================================== */
+
+  --dash-table-bg: linear-gradient(
+    120deg,
+    #e0edff 0%,
+    #e9e0fa 54%,
+    #fff0e2 100%
+  );
+
+
+  /* ========================================
+     BOTÕES SECUNDÁRIOS
+     ======================================== */
+
+  /* Botão Editar */
+  --dash-action-bg: #d9e6ff;
+
+  --dash-action-text: #16499f;
+
+
+
+--dash-border-total: #377de0;
+--dash-border-disponiveis: #168b6a;
+--dash-border-emprestados: #da723f;
+--dash-border-manutencao: #7753cb;
+
+}

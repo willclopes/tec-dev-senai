@@ -1,13 +1,18 @@
 import { Logo } from "../Logo/index.jsx";
-import { Rodape, Conteudo, Texto } from "./styled.jsx";
+import { Conteudo, Texto, ContainerFlutuante } from "./styled.jsx";
 
-export default function Footer() {
+export function Footer() {
   return (
-    <Rodape>
+    <ContainerFlutuante>
+    {/* <RodapeAntigo> */}
       <Conteudo>
         <Logo />
         <Texto>Feito para a TechSolutions · 2026 · Tec Dev Sistemas Web · SENAI  🎓</Texto>
       </Conteudo>
-    </Rodape>
-  );
+  
+  
+  {/* </RodapeAntigo> */}
+  </ContainerFlutuante>
+
+);
 }

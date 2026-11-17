@@ -3,7 +3,7 @@ import {ContainerBanner, ConteudoBanner, EtiquetaBanner, TituloBanner, Descricao
 
 
 
-export default function Banner({ tituloSuperior, title, description }) {
+export function Banner({ tituloSuperior, title, description }) {
   return (
     <ContainerBanner>
 

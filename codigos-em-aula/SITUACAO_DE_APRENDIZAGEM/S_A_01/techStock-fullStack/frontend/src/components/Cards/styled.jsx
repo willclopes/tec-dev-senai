@@ -7,6 +7,11 @@ export const Card = styled.div`
   border: 2px solid
     ${({ $tipo }) => `var(--dash-border-${$tipo})`};
   border: 2px solid white;
+
+
+  border-top: 10px solid
+  ${({ $tipo }) => `var(--dash-border-${$tipo})`};
+
   
   background: ${({ $tipo }) =>
     `var(--dash-card-${$tipo})`};
@@ -72,3 +77,4 @@ export const Etiqueta = styled.span`
   font-weight: 800;
   letter-spacing: 1px;
 `;
+

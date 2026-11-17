@@ -1,8 +1,7 @@
 
-import { EtiquetaBanner } from "../Banner/styled.jsx";
-import {Card, Topo, Legenda, Icone, Numero, LegendaCard, Etiqueta } from "./styled.jsx";
+import {Card, Topo, Legenda, Icone, Numero, LegendaCard, } from "./styled.jsx";
 
-export default function Cards({ tipo, legenda, numerocard, legendacard, icone }) {
+export function Cards({ tipo, legenda, numerocard, legendacard, icone }) {
   
     return (
     <Card $tipo={tipo}>

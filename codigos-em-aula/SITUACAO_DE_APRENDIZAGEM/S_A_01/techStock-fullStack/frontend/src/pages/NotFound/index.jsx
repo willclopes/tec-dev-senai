@@ -1,7 +1,7 @@
 import { BotaoVoltar,  Conteudo,  Descricao, Etiqueta, Exclamacao,  MainContainer, Numero, Quadro, Titulo } from "./styled";
 
 
-export default function NotFound() {
+export function NotFound() {
   return (
     <MainContainer>
       <Quadro>
@@ -17,7 +17,7 @@ export default function NotFound() {
             Talvez o endereço esteja incorreto ou a página não exista mais.
         </Descricao>
 
-          <BotaoVoltar> ← Voltar ao Dashboard</BotaoVoltar>
+          <BotaoVoltar to="/dashboard"> ↩ Voltar ao Dashboard</BotaoVoltar>
      </Conteudo>
 
         

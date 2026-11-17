@@ -9,6 +9,8 @@ export const Painel = styled.section`
   border-radius: 22px;
   box-shadow: var(--shadow);
 
+  border-top: 10px solid var(--dash-border-manutencao);
+
 
   
 `;
