@@ -1,47 +1,15 @@
 import {
-  Painel,
-  Titulo,
-  Descricao,
-  TabelaContainer,
-  Tabela,
-  Status,
-  Paginacao,
-  BotaoPagina,
-  Acoes,
-  BotaoAcao
-} from "./styled.jsx";
+  Painel,  Titulo, Descricao, TabelaContainer, Tabela, Status, Paginacao, BotaoPagina, Acoes, BotaoAcao} from "./styled.jsx";
 
 
-export function Catalogo({
-titulo, 
-  descricao, 
-  equipamentos = [], 
-  mostrarAcoes = false, 
-  onEdit,     
-  onDelete,   
-  paginaAtual,
-  totalPaginas,
-  onPaginaAnterior,
-  onPaginaProxima
-
-
-
-}) {
+export function Catalogo({titulo, descricao, equipamentos = [], mostrarAcoes = false, onEdit, onDelete, paginaAtual, totalPaginas, 
+  onPaginaAnterior, onPaginaProxima }) {
   
-    
-
-   return (
+ return (
     <Painel>
-      {/* TÍTULO DO CATÁLOGO */}
-      <Titulo>
-        {titulo}
-      </Titulo>
+      <Titulo> {titulo} </Titulo>
+      <Descricao>{descricao}</Descricao>
 
-      <Descricao>
-        {descricao}
-      </Descricao>
-
-      {/* TABELA DE EQUIPAMENTOS */}
       <TabelaContainer>
         <Tabela>
           <thead>
@@ -66,7 +34,6 @@ titulo,
                 <td>{equipamento.data_aquisicao?.split('-').reverse().join('/')}</td>
                 <td>               
                   <Status 
-                    // Mapeia o status do banco para a variável CSS (minúscula/sem acento)
                     $status={
                       equipamento.status === "Disponível" ? "disponivel" :
                       equipamento.status === "Emprestado" ? "emprestado" : 
@@ -74,12 +41,10 @@ titulo,
                     }
                   >
                     ⏺&nbsp;
-                    {/* Imprime o status exatamente como veio do banco */}
                     {equipamento.status} 
                   </Status>
                 </td>
 
-                {/* BOTÕES DE EDITAR E EXCLUIR */}
                 {mostrarAcoes && (
                   <td>
                     <Acoes>
@@ -104,7 +69,6 @@ titulo,
               </tr>
             ))}
 
-            {/* Mensagem quando não existir equipamento */}
             {equipamentos.length === 0 && (
               <tr>
                 <td colSpan={mostrarAcoes ? "7" : "6"}>
@@ -116,7 +80,6 @@ titulo,
         </Tabela>
       </TabelaContainer>
 
-      {/* PAGINAÇÃO */}
       <Paginacao>
         <span>
           {equipamentos.length} equipamento(s) listado(s) nesta página

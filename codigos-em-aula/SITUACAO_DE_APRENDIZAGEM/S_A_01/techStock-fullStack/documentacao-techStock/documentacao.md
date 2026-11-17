@@ -7,6 +7,8 @@
 
 O arquivo [`./banco_sql`/`01_techstock.sql`](01_techstock.sql) contém o `CREATE TABLE` e  `INSERT` de exemplo.
 
+(Logo abaixo também tem os scripts - CREATE + INSERTS)
+
 ```sql
 CREATE DATABASE IF NOT EXISTS techstock;
 USE techstock;
@@ -95,7 +97,7 @@ SELECT COUNT(*) AS total FROM equipamentos;
 
 2. Alterar o .json
 
-```"dev": "node -- wah```
+```dev": "node --watch src/server.js```
 
 3. Trocar o Type
 
@@ -103,7 +105,7 @@ SELECT COUNT(*) AS total FROM equipamentos;
 
 4. criar o arquivo "server.js"
 
-### 3.1 Instalação das Bibliotecas/dependências
+### 4.1 Instalação das Bibliotecas/dependências
 
 ```
 npm init -y
@@ -112,6 +114,14 @@ nmp install uuid
 npm install dotenv
 
 ```
+
+# 4.2 - Rodando o BackEnd
+
+```
+node server.js
+
+```
+
 
 
 # 4. FRONTEND
@@ -129,4 +139,16 @@ npm install react-hook-form
 
 npm install sweetalert2 --no-bin-links (para exibir alertas)
 
+
 ```
+# 4.2 - Rodando o frontend
+
+```
+npm run dev
+
+```
+
+
+
+
+

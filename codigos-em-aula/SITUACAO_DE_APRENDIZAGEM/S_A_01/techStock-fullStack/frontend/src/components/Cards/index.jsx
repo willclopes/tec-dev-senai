@@ -8,25 +8,14 @@ export function Cards({ tipo, legenda, numerocard, legendacard, icone }) {
 
       <Topo>
 
-        
-            <Legenda>
-            {legenda}
-            </Legenda>
-
-        
-        <Icone>
-          {icone}
-        </Icone>
+        <Legenda> {legenda} </Legenda>
+        <Icone> {icone} </Icone>
 
       </Topo>
 
-      <Numero>
-        {numerocard}
-      </Numero>
+      <Numero> {numerocard} </Numero>
 
-      <LegendaCard>
-        {legendacard}
-      </LegendaCard>
+      <LegendaCard>{legendacard} </LegendaCard>
 
     </Card>
   );

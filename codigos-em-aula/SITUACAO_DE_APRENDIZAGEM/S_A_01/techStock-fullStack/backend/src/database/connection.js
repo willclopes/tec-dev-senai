@@ -4,7 +4,7 @@ export const db = await mysql.createConnection({
     host: "localhost",
     port: 3307,
     user: "root",
-    password: "1234", 
+    password: "123", 
     //password: "1234",
     database: "techstock_db",
     waitForConnections: true,

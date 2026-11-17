@@ -9,9 +9,6 @@ export async function listAllEquipamentos(request, response){
     return response.code(200).send(equipamentos)
 }
 
-
-
-
 /*
 
 export async function listAllEquipamentos(request, response){
@@ -22,9 +19,6 @@ export async function listAllEquipamentos(request, response){
 
 
 */
-
-
-
 
 export async function listEquipamentosById(request, response){
         const equipamentos = await getEquipamentoById(request.params.id)

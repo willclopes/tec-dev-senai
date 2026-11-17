@@ -3,20 +3,8 @@ import axios from "axios"
 import Swal from "sweetalert2"
 
 import {
-  ContainerPrincipal,
-  IndicadoresCards,
-  Painel,
-  TituloPainel,
-  DescricaoPainel,
-  Formulario,
-  LinhaCampos,
-  CampoFormulario,
-  LinhaOpcoes,
-  GrupoRadio,
-  OpcoesCategoria,
-  OpcoesSituacao,
-  BotaoCadastro,
-} from "./styled.jsx";
+  ContainerPrincipal, IndicadoresCards, Painel, TituloPainel, DescricaoPainel, Formulario, LinhaCampos, 
+  CampoFormulario, LinhaOpcoes, GrupoRadio, OpcoesCategoria, OpcoesSituacao, BotaoCadastro, } from "./styled.jsx";
 
 import {Cards} from "../../components/Cards/index.jsx";
 import {Banner} from "../../components/Banner/index.jsx";
@@ -168,9 +156,7 @@ export function Dashboard() {
           Preencha os dados do novo equipamento.
         </DescricaoPainel>
 
-        {/* Adicionado o onSubmit no Formulario */}
         <Formulario onSubmit={handleSubmit}>
-          {/* PRIMEIRA LINHA - DADOS */}
           <LinhaCampos>
             <CampoFormulario>
               <label htmlFor="nome">Nome do equipamento</label>
@@ -190,7 +176,7 @@ export function Dashboard() {
                 id="serie"
                 name="numero_serie"
                 type="text"
-                placeholder="Ex.: TS-NB-001"
+                placeholder="Ex.: NB-001"
                 value={formData.numero_serie}
                 onChange={handleInputChange}
               />
@@ -208,9 +194,7 @@ export function Dashboard() {
             </CampoFormulario>
           </LinhaCampos>
 
-          {/* SEGUNDA LINHA - CATEGORIA, SITUAÇÃO E BOTÃO */}
           <LinhaOpcoes>
-            {/* CATEGORIAS */}
             <GrupoRadio>
               <legend>Categoria</legend>
 
@@ -283,7 +267,6 @@ export function Dashboard() {
               </OpcoesCategoria>
             </GrupoRadio>
 
-            {/* SITUAÇÃO */}
             <GrupoRadio>
               <legend>Situação</legend>
 
@@ -323,7 +306,6 @@ export function Dashboard() {
               </OpcoesSituacao>
             </GrupoRadio>
 
-            {/* BOTÃO AO LADO DOS RADIO BUTTONS: type atualizado para submit e texto dinâmico */}
             <BotaoCadastro type="submit">
               {formData.id ? "✎ᝰ Atualizar equipamento" : "+ Cadastrar equipamento"}
             </BotaoCadastro>
@@ -331,11 +313,7 @@ export function Dashboard() {
         </Formulario>
       </Painel>
 
-      {/* ====================================== */}
-      {/* ÁREA DE CADASTRO - FIM                 */}
-      {/* ====================================== */}
-
-      {/* Adicionado o repasse das funções handleEdit e handleDelete para o componente filho */}
+   
       <Catalogo
         titulo="Catálogo de ativos"
         descricao="Equipamentos cadastrados na empresa."

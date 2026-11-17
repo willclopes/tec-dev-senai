@@ -6,17 +6,8 @@ import {Catalogo} from "../../components/Catalogo";
 import { equipamentosIniciais } from "../../../src/data/equipamentos.js"
 
 import {
-  ContainerPrincipal,
-  PainelFiltros,
-  TituloFiltros,
-  DescricaoFiltros,
-  FormularioBusca,
-  GradeFiltros,
-  CampoFiltro,
-  Botoes,
-  BotaoBuscar,
-  BotaoLimpar,
-} from "./styled.jsx";
+  ContainerPrincipal, PainelFiltros, TituloFiltros, DescricaoFiltros, FormularioBusca, GradeFiltros, CampoFiltro, Botoes,
+  BotaoBuscar, BotaoLimpar, } from "./styled.jsx";
 
 
 const filtrosIniciais = {
@@ -63,15 +54,10 @@ export function Consultas() {
             description="Pesquise e filtre os equipamentos cadastrados de forma rápida e organizada."
       />
 
-        {/* ====================================== */}
-      {/* PAINEL DE FILTROS     - inicio           */}
-      {/* ====================================== */}
-
+       
 
     <PainelFiltros>
-            <TituloFiltros>
-          Consultar equipamentos
-        </TituloFiltros>
+            <TituloFiltros> Consultar equipamentos </TituloFiltros>
 
         <DescricaoFiltros>
           Utilize os filtros abaixo para encontrar equipamentos.
@@ -192,13 +178,6 @@ export function Consultas() {
 
 
     </PainelFiltros>
-
-
-
-
-        {/* ====================================== */}
-      {/* PAINEL DE FILTROS    - fim              */}
-      {/* ====================================== */}
 
 
 

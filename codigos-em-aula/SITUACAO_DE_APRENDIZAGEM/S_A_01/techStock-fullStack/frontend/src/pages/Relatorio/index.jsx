@@ -19,11 +19,9 @@ export function Relatorio(tipo) {
 
 
 
-      {/* ÁREA PRINCIPAL DO RELATÓRIO */}
 
       <Grade>
 
-        {/* LADO ESQUERDO - CATEGORIAS */}
 
         <Painel>
 
@@ -81,8 +79,6 @@ export function Relatorio(tipo) {
 
         
 
-        {/* LADO DIREITO - SITUAÇÃO */}
-
         <Painel>
 
         
@@ -94,8 +90,6 @@ export function Relatorio(tipo) {
             Distribuição dos Ativos por Empréstimos.
           </DescricaoPainel>
 
-
-          {/* DISPONÍVEIS */}
 
          
             <LinhaSituacao>
@@ -133,8 +127,6 @@ export function Relatorio(tipo) {
             </LinhaSituacao>
 
 
-
-          {/* INFORMAÇÃO EM DESTAQUE */}
 
           <Destaque $tipo={"emprestados"}>
 

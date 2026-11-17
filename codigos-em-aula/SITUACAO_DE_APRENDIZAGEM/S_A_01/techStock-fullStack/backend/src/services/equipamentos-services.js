@@ -19,7 +19,7 @@ export async function getAllEquipamentos(page = 1, limit = 10) {
 
     )
 
-        //Consultas no banco para usar nos cards e no resumo
+        //Consultas no banco para usar nos cards e no relatório
 
             const [contagem] = await db.query(`
         
@@ -71,6 +71,9 @@ export async function getAllEquipamentos(page = 1, limit = 10) {
             disponiveis: disponiveis,
             emprestados: emprestados,
             manutencao: manutencao,
+            
+            /* não utilizadas */
+            
             totalCategorias: Number(dados.totalCategorias) || 0,
             pctDisponivel: pctDisponivel,
             pctEmprestado: pctEmprestado,

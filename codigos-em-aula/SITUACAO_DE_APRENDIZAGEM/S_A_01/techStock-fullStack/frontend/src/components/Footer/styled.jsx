@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 
-
 export const ContainerFlutuante = styled.footer`
   max-width: 1300px;
   height: 85px;
@@ -17,8 +16,6 @@ export const ContainerFlutuante = styled.footer`
   border: 1px solid var(--line);
   border-radius: 16px;
   box-shadow: var(--shadow);
-
-
       
 `;
 
@@ -36,8 +33,6 @@ export const Conteudo = styled.div`
   padding: 25px 30px;
   width: 100%;
   //max-width: 1300px;
-
-
   
 `;
 
