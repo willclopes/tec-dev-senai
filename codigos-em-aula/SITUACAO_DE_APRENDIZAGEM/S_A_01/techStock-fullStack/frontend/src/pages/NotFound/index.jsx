@@ -1,9 +1,9 @@
-import { BotaoVoltar,  Conteudo,  Descricao, Etiqueta, Exclamacao,  MainContainer, Numero, Quadro, Titulo } from "./styled";
+import { BotaoVoltar,  Conteudo,  Descricao, Etiqueta, Exclamacao, Numero, Quadro, Titulo } from "./styled";
 
 
 export function NotFound() {
   return (
-    <MainContainer>
+   
       <Quadro>
         <Conteudo>
           
@@ -25,7 +25,7 @@ export function NotFound() {
 
 
        </Quadro> 
-    </MainContainer>
+   
 
     )
 }
