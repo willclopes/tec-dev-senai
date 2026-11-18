@@ -99,8 +99,6 @@ export async function getAllEquipamentos() {
 */
 
 
-
-
 export async function getEquipamentoById(id) {
     const [ equipamento ] = await db.query("SELECT * FROM equipamentos WHERE id = ?", [id])
     
