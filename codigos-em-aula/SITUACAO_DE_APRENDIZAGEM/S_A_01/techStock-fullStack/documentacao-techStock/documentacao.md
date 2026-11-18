@@ -41,8 +41,6 @@ use techstock
 ```
 
 
-
-
 ### 2.3 - Criação da Tabela
 
 Usar script modelado em 1.1 para criar a tabela.
@@ -78,7 +76,7 @@ INSERT INTO equipamentos (nome, categoria, numero_serie, status, data_aquisicao)
 
 ```
 
-## 2.5 - Comandos de consulta úteis
+### 2.5 - Comandos de consulta úteis
 
 ```sql
 -- Todos os registros cadastrados.
@@ -105,7 +103,7 @@ SELECT COUNT(*) AS total FROM equipamentos;
 
 4. criar o arquivo "server.js"
 
-### 4.1 Instalação das Bibliotecas/dependências
+### 3.1 Instalação das Bibliotecas/dependências
 
 ```
 npm init -y
@@ -115,7 +113,16 @@ npm install dotenv
 
 ```
 
-# 4.2 - Rodando o BackEnd
+### 3.2 - Criação dos arquivos do BackEnd
+
+- 📁controler/ equipamentos-controller.js
+- 📁database / connection.js
+- 📁routes / equipamentos-routes.js
+- 📁services / equipamentos-services.js
+- app.js
+
+
+### 3.3 - Rodando o BackEnd
 
 ```
 node server.js
@@ -123,12 +130,10 @@ node server.js
 ```
 
 
-
-# 4. FRONTEND
-
+## 4. FRONTEND
 
 
-## 4.1 - Instalação das Bibliotecas/dependências
+### 4.1 - Instalação das Bibliotecas/dependências
 
 
 ```
@@ -141,15 +146,16 @@ npm install sweetalert2 --no-bin-links (para exibir alertas)
 
 
 ```
-# 4.2 - Rodando o frontend
+### 4.2 - Rodando o frontend
 
 ```
 npm run dev
 
 ```
-# 5. Esquema de **árvore de pastas e arquivos do TechStock**, incluindo o **Frontend (React)**, o **Backend (Node.js)**
 
-## 5.1. Árvore de pastas
+## 5. Esquema de **árvore de pastas e arquivos do TechStock**, incluindo o **Frontend (React)**, o **Backend (Node.js)**
+
+### 5.1. Árvore de pastas
 
 ```text
 📁 TechStock/
