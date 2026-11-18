@@ -25,3 +25,5 @@ Nas versões atuais do @fastify/cors, a configuração padrão autoriza apenas G
 
     return app
 }
+0
+//http://127.0.0.1:PORTA/equipamentos

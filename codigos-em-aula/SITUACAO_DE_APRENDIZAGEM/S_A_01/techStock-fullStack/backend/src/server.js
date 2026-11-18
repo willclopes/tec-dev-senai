@@ -13,3 +13,6 @@ app.listen({ port: process.env.PORT ?? 3000 }, (err, address) => {
 
     console.log('Servidor rodando em ${address}')
 })
+
+
+//http://127.0.0.1:PORTA/equipamentos
