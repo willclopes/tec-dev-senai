@@ -84,28 +84,30 @@ Este é o esquema de **árvore de pastas e arquivos do TechStock**, incluindo o 
 │   └── package.json
 │
 │
-├── 📁 backend/
-│   │
-│   ├── 📁 controllers/
-│   │   └── equipamentos-controller.js
-│   │
-│   ├── 📁 services/
-│   │   └── equipamentos-services.js
-│   │
-│   ├── 📁 repositories/
-│   │   └── equipamentos-repository.js
-│   │
-│   ├── 📁 routes/
-│   │   └── equipamentos-routes.js
-│   │
-│   ├── 📁 database/
-│   │   └── connection.js
-│   │
-│   ├── server.js
-│   ├── .env
-│   └── package.json
 │
-└── README.md
+└── 📁backend/
+│   │
+│   ├── 📁 src/
+│   │   │
+│   │   ├── 📁controller/
+│   │   │   └── equipamentos-controller.js
+│   │   │
+│   │   ├── 📁services/
+│   │   │   └── equipamentos-service.js
+│   │   │
+│   │   ├── 📁repositories/
+│   │   │   └── equipamentos-repository.js
+│   │   │
+│   │   ├── 📁routes/
+│   │   │   └── equipamentos-routes.js
+│   │   │
+│   │   └── 📁database/
+│   │   │   └── connection.js
+│   │   │
+│   │   ├── server.js
+|   │   ├── app.js    
+│   │   ├── package.json
+│   │   └── .env
 ```
 
 ## 2. Onde entra a paginação?
@@ -164,6 +166,3 @@ USUÁRIO CLICA NA PÁGINA 2
     CATÁLOGO MOSTRA A PÁGINA 2
 ```
 
-## 4. Observação sobre a arquitetura
-
-Para o projeto de aprendizagem, essa separação ajuda a compreender a responsabilidade de cada camada. **Você não precisa criar uma pasta `repositories`** se o professor já realiza as consultas SQL diretamente nos `services`. É possível manter a arquitetura ensinada em aula e implementar a paginação sem adicionar complexidade desnecessária.

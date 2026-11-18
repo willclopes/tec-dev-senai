@@ -16,6 +16,8 @@ export const ContainerFlutuante = styled.footer`
   border: 1px solid var(--line);
   border-radius: 16px;
   box-shadow: var(--shadow);
+  
+  border: 3px solid var(--dash-border-manutencao);
       
 `;
 

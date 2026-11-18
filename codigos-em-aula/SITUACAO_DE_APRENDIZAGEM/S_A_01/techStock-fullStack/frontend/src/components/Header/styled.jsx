@@ -16,6 +16,10 @@ export const ContainerFlutuante = styled.header`
   border-radius: 16px 16px 16px 16px;
   box-shadow: var(--shadow);
 
+  border: 3px solid var(--dash-border-manutencao);
+  
+  //border-top: 6px solid var(--dash-border-manutencao);
+
    
 `;
 
@@ -27,7 +31,7 @@ export const ContainerAntigo = styled.header`
 `;
 
 export const Faixa = styled.div`
-  border-bottom: 1px solid var(--dash-border-manutencao);
+ // border-bottom: 1px solid var(--dash-border-manutencao);
   width: 100%;
   background: var(--surface);
   //border-radius: 20px;
@@ -97,6 +101,7 @@ export const BotaoNovo = styled(NavLink)`
   transform: scale(1.08);
   }
 
+  /* recurso para ativar o "background azul" Quando a página estiver selecionada */
   &:active {
     transform: scale(0.80);
   }

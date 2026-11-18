@@ -10,7 +10,9 @@ export const ContainerBanner = styled.section`
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   margin-bottom: 25px;
-  border: 2px solid white;
+  border: 3px solid white;
+
+  //border: 3px solid var(--dash-border-manuten);
 
   
 `;
@@ -55,5 +57,6 @@ export const DescricaoBanner = styled.p`
   line-height: 1.7;
   color: var(--muted);
   font-style: italic;
+  font-weight: 500;
 `;
 

@@ -147,8 +147,110 @@ npm install sweetalert2 --no-bin-links (para exibir alertas)
 npm run dev
 
 ```
+# 5. Esquema de **árvore de pastas e arquivos do TechStock**, incluindo o **Frontend (React)**, o **Backend (Node.js)**
 
+## 5.1. Árvore de pastas
 
-
+```text
+📁 TechStock/
+│
+├── 📁 frontend/
+│   │
+│   ├── 📁 public/
+│   │
+│   ├── 📁 src/
+│   │   │
+│   │   ├── 📁 components/
+│   │   │   │
+│   │   │   ├── 📁 Header/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styled.jsx
+│   │   │   │
+│   │   │   ├── 📁 Footer/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styled.jsx
+│   │   │   │
+│   │   │   ├── 📁 Logo/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styled.jsx
+│   │   │   │
+│   │   │   ├── 📁 Banner/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styled.jsx
+│   │   │   │
+│   │   │   ├── 📁 Cards/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styled.jsx
+│   │   │   │
+│   │   │   ├── 📁 Catalogo/
+│   │   │   │   ├── index.jsx   ← Tabela e paginação
+│   │   │   │   └── styled.jsx
+│   │   │   │
+│   │   │   └── 📁 Layout/         
+│   │   │       └── index.jsx   ← arquivo para "montar" os componentes da "rota" 
+│   │   │
+│   │   ├── 📁 pages/
+│   │   │   │
+│   │   │   ├── 📁 PrimeiraVersao/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styled.jsx
+│   │   │   │
+│   │   │   ├── 📁 Dashboard/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styled.jsx
+│   │   │   │
+│   │   │   ├── 📁 Relatorio/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styled.jsx
+│   │   │   │
+│   │   │   ├── 📁 Consultas/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styled.jsx
+│   │   │   │
+│   │   │   └── 📁 NotFound/
+│   │   │       ├── index.jsx
+│   │   │       └── styled.jsx
+│   │   │
+│   │   ├── router.jsx
+│   │   │
+│   │   ├── 📁 data/
+│   │   │   └── equipamentos.js   ← arquivo para teste do frontend
+│   │   │
+│   │   ├── 📁 styles/
+│   │   │   └── palette-azul.css  ← decoração visual de todo projeto
+│   │   │
+│   │   ├── App.jsx               ← chama o RouterProvider router={router}
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx              ← importação do "palette-azul.css"
+│   │
+│   ├── index.html
+│   └── package.json
+│
+└── 📁backend/
+│   │
+│   ├── 📁 src/
+│   │   │
+│   │   ├── 📁controller/
+│   │   │   └── equipamentos-controller.js
+│   │   │
+│   │   ├── 📁services/
+│   │   │   └── equipamentos-services.js
+│   │   │
+│   │   ├── 📁repositories/
+│   │   │   └── equipamentos-repository.js
+│   │   │
+│   │   ├── 📁routes/
+│   │   │   └── equipamentos-routes.js
+│   │   │
+│   │   └── 📁database/
+│   │   │   └── connection.js
+│   │   │
+│   │   ├── server.js
+|   │   ├── app.js    
+│   │   ├── package.json
+│   │   └── .env
+```
+```
 
 
