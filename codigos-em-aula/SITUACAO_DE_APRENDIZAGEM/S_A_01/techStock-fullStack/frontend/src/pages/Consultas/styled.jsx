@@ -8,6 +8,7 @@ export const ContainerPrincipal = styled.main`
   padding: 0 30px;
   box-sizing: border-box;
   
+  
 `;
 
 
@@ -22,6 +23,8 @@ export const PainelFiltros = styled.section`
 
   margin-bottom: 25px;
 
+  border-top: 10px solid var(--dash-border-manutencao);
+  border-bottom: 10px solid var(--dash-border-manutencao);
  
 `;
 

@@ -32,7 +32,7 @@ export function PrimeiraVersao() {
         
         
         //Pede os dados ao servidor e aguarda a resposta
-        const response = await axios.get(`http://127.0.0.1:3003/equipamentos?page=${pagina}&limit=100`)
+        const response = await axios.get(`http://127.0.0.1:3003/equipamentos?page=${pagina}&limit=10`)
             //Salva apenas a lista de equipamentos (response.data) no estado do React
         setEquipamentos(response.data.data)
         //console.log(response)
@@ -395,7 +395,7 @@ const handleDelete = async (id) => {
            </ListSection> 
 
 
-{/*
+
 <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "20px" }}>
                             <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
@@ -419,7 +419,7 @@ const handleDelete = async (id) => {
                 </div>
             </div>
 
-*/}
+
 
 
        </MainContainer>
