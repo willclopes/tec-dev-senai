@@ -20,9 +20,11 @@ return (
           <LinkMenu to="/primeiraversao"> [Primeira Versão]</LinkMenu>
           <LinkMenu to="/dashboard"> 📊Dashboard</LinkMenu>
 
-          <LinkMenu to="/relatorio" style={{
-           opacity: 0.6,
-          textDecoration: "line-through",  }}
+          <LinkMenu to="/relatorio"
+            title="Página em desenvolvimento"
+            style={{
+                opacity: 0.6,
+                textDecoration: "line-through",  }}
             >
               📑Relatório 🚧 
           </LinkMenu>    
@@ -30,9 +32,10 @@ return (
           
           
           <LinkMenu to="/consultas"
+            title="Página em desenvolvimento"
             style={{
-           opacity: 0.6,
-            textDecoration: "line-through",  }}         
+                opacity: 0.6,
+                textDecoration: "line-through",  }}         
           >🔍︎ Consultas 🚧 </LinkMenu>
 
           
