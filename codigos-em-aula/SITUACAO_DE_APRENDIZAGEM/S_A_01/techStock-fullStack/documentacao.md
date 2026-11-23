@@ -1,7 +1,7 @@
 # DOCUMENTAÇÃO - SITUAÇÃO DE APRENDIZAGEM I - TECHSTOCK
 
 
-## 1. CRIAÇÃO E MODELAGEM DO BANCO DE DANDOS
+## 1. CRIAÇÃO E MODELAGEM DO BANCO DE DANDOS- - NÃO DOCKER
 
 ### 1.1 - Queries utilizadas na criação
 
@@ -43,7 +43,18 @@ use techstock
 
 ### 2.3 - Criação da Tabela
 
-Usar script modelado em 1.1 para criar a tabela.
+```
+USE techstock;
+
+CREATE TABLE IF NOT EXISTS equipamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(120) NOT NULL,
+    categoria VARCHAR(60) NOT NULL,
+    numero_serie VARCHAR(100) NOT NULL UNIQUE,
+    status VARCHAR(50) NOT NULL,
+    data_aquisicao VARCHAR(100) NOT NULL
+);
+```
 
 
 ### 2.4 - Inserir informações no Banco para teste
