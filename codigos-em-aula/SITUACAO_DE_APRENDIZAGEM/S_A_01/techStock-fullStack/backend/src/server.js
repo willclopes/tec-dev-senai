@@ -5,7 +5,7 @@ configDotenv()
 
 const app = buildApp()
 
-app.listen({ port: process.env.PORT ?? 3000 }, (err, address) => {
+app.listen({ port: process.env.PORT ?? 3003 }, (err, address) => {
     if(err) {
         app.log.error(err)
         process.exit(1)

@@ -44,7 +44,7 @@ use techstock
 ### 2.3 - Criação da Tabela
 
 ```
-USE techstock;
+USE techstock_db;
 
 CREATE TABLE IF NOT EXISTS equipamentos (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -61,8 +61,8 @@ CREATE TABLE IF NOT EXISTS equipamentos (
 
 ```sql
 
---Selecionar a tablela
-use equipamentos;
+--Selecionar a tablela (caso não tenha selecionado anteriormente)
+use techstock_db; 
 
 -- Inserção de registros fictícios para teste
 INSERT INTO equipamentos (nome, categoria, numero_serie, status, data_aquisicao) VALUES
@@ -137,6 +137,10 @@ npm install dotenv
 
 ```
 node server.js
+
+OU
+
+npm run dev
 
 ```
 

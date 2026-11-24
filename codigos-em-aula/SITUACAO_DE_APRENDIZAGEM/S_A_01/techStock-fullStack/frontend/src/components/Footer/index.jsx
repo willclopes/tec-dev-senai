@@ -7,7 +7,7 @@ export function Footer() {
     {/* <RodapeAntigo> */}
       <Conteudo>
         <Logo />
-        <Texto>Feito para a TechSolutions · 2026 · Tec Dev Sistemas Web · SENAI  🎓</Texto>
+        <Texto>Feito para a TechStock · 2026 · Tec Dev Sistemas Web · SENAI · WILLIAN  🎓</Texto>
       </Conteudo>
   
   

@@ -1,7 +1,7 @@
 import { v4 } from "uuid"
 import { db } from "../database/connection.js"
 
-export async function getAllEquipamentos(page = 1, limit = 10) {
+export async function getAllEquipamentos(page, limit) {
     
     const pagina = Number(page)
     const limite = Number(limit)
@@ -54,14 +54,14 @@ export async function getAllEquipamentos(page = 1, limit = 10) {
     const [resultadoTotal] = await db.query(
         "SELECT COUNT(*) AS total FROM equipamentos"
     )
-    const totalItens = resultadoTotal[0].total
+    const totalEquipamentos = resultadoTotal[0].total
 
-    const totalPaginas = Math.ceil(totalItens / limite)
+    const totalPaginas = Math.ceil(totalEquipamentos / limite)
 
     return {
         data: equipamentos,
         meta: {
-            totalItens: totalItens,
+            totalEquipamentos: totalEquipamentos,
             totalPaginas: totalPaginas,
             paginaAtual: pagina,
             itensPorPagina: limite
@@ -72,7 +72,7 @@ export async function getAllEquipamentos(page = 1, limit = 10) {
             emprestados: emprestados,
             manutencao: manutencao,
             
-            /* não utilizadas */
+            /* não utilizadas 
             
             totalCategorias: Number(dados.totalCategorias) || 0,
             pctDisponivel: pctDisponivel,
@@ -84,6 +84,11 @@ export async function getAllEquipamentos(page = 1, limit = 10) {
             acessorios: Number(dados.acessorios) || 0,
             teclados: Number(dados.teclados) || 0,
             headsets: Number(dados.headsets) || 0
+
+            */
+
+
+
     }
   }
 }
