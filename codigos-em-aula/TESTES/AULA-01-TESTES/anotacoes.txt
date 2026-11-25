@@ -1,0 +1,18 @@
+criando api
+
+npm init -y
+trocar o 
+
+"type": "module"
+
+criar o dev
+
+"dev": "node --watch src/sun.js"
+
+instalar
+npm install -D vitest
+
+
+trocar no .json
+
+"test": "vitest" = npm run test
