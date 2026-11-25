@@ -12,6 +12,8 @@ criar o dev
 instalar
 npm install -D vitest
 
+-d - pq é um lib de desenvolvimento, não deve subir pra produção. fica na parte de dev do json
+
 
 trocar no .json
 
