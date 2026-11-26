@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "dev": "node --watch src/sun.js"
+    "dev": "node --watch src/sum.js"
 
   },
   "keywords": [],

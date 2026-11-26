@@ -7,7 +7,12 @@ trocar o
 
 criar o dev
 
-"dev": "node --watch src/sun.js"
+"dev": "node --watch src/nome_arquivo.js"
+
+
+trocar
+
+"test": "vitest" = npm run test
 
 instalar
 npm install -D vitest
@@ -15,6 +20,64 @@ npm install -D vitest
 -d - pq é um lib de desenvolvimento, não deve subir pra produção. fica na parte de dev do json
 
 
-trocar no .json
+para executar
 
-"test": "vitest" = npm run test
+sem configuaração no .json
+
+npx vitest
+
+Ou, caso tenha configurado o package.json:
+npm test
+
+
+--
+
+COMANDOS
+
+npm run dev	        - Executa o JavaScript com Node.js.
+npm test	        - Executa os testes e monitora alterações.
+npm run test:run	- Executa os testes uma única vez.
+npx vitest	        - Executa diretamente o Vitest.
+
+--
+
+Funções:
+Comando	O que faz
+test()	Cria um teste
+expect()	Recebe o resultado da função
+.toBe()	Compara valores simples
+.toBe(true)	Verifica se retornou verdadeiro
+.toBe(false)	Verifica se retornou falso
+.toEqual()	Compara arrays e objetos
+.toContain()	Verifica se contém determinado valor
+.toHaveLength()	Verifica a quantidade de elementos ou caracteres
+
+-
+
+Método de estudo recomendado
+Para cada exercício, tente seguir a metodologia TDD (Test-Driven Development), que significa desenvolvimento orientado a testes.
+
+1. RED — Vermelho
+
+Crie uma função inicial ainda incompleta e escreva o teste. Execute e veja o teste falhar.
+
+2. GREEN — Verde
+
+Implemente a função da maneira mais simples possível até o teste passar.
+
+3. REFACTOR — Refatorar
+
+Melhore o código, se necessário, garantindo que os testes continuem passando.
+
+--
+
+Nova estrutura
+
+Comando	Função
+
+describe()	Agrupa os testes de uma determinada funcionalidade.
+it()	Define um cenário de teste individual.
+expect()	Recebe o resultado da função executada.
+.toBe()	Compara o resultado obtido com o esperado.
+
+O it() e o test() possuem a mesma funcionalidade no Vitest. A principal diferença aqui é a organização dos testes utilizando o describe().

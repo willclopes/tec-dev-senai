@@ -1,0 +1,13 @@
+{
+  "name": "04-crud-generico-em-camadas",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "fastify": "^5.6.0",
+    "uuid": "^13.0.0"
+  }
+}

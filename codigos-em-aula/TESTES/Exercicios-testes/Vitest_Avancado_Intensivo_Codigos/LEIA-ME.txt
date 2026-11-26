@@ -1,0 +1,2 @@
+Abra a pasta no VS Code. Execute npm install e npm run test:run.
+Cada exercício tem sua implementação e seu arquivo de teste.

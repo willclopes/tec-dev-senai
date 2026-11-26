@@ -1,0 +1,13 @@
+{
+  "name": "02-biblioteca-arquivos-separados",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "fastify": "^5.0.0",
+    "uuid": "^11.0.0"
+  }
+}
